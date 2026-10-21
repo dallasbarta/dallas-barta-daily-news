@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Barta Daily News</title>
+<style>
+  :root{
+    --bg:#f6f4ef; --panel:#ffffff; --ink:#1c2430; --muted:#6b7280;
+    --accent:#0b6e4f; --accent2:#c0392b; --line:#e5e0d5; --chip:#eef7f2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink)}
+  header{background:var(--ink);color:#fff;padding:22px 20px 18px;border-bottom:4px solid var(--accent)}
+  header h1{margin:0;font-size:30px;letter-spacing:.5px}
+  header p{margin:6px 0 0;color:#cfd6dd;font-size:15px;font-style:italic}
+  .layout{display:flex;gap:0;max-width:1200px;margin:0 auto;align-items:stretch}
+  nav{width:230px;flex:0 0 230px;background:var(--panel);border-right:1px solid var(--line);padding:14px 0;min-height:70vh}
+  nav h2{font-size:12px;letter-spacing:2px;color:var(--muted);margin:4px 18px 10px;text-transform:uppercase;font-family:Arial,sans-serif}
+  .datebtn{display:block;width:100%;text-align:left;background:none;border:none;border-left:4px solid transparent;
+    padding:10px 18px;cursor:pointer;font-family:Arial,sans-serif;font-size:14px;color:var(--ink)}
+  .datebtn:hover{background:#faf8f3}
+  .datebtn.active{border-left-color:var(--accent);background:var(--chip);font-weight:bold}
+  .datebtn .cnt{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+  .pill{display:inline-block;background:var(--accent2);color:#fff;font-size:10px;padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:middle;letter-spacing:.5px}
+  main{flex:1;padding:20px 26px 40px;min-width:0}
+  main h2.daytitle{margin:2px 0 4px;font-size:24px}
+  main .daymeta{color:var(--muted);font-family:Arial,sans-serif;font-size:13px;margin-bottom:18px}
+  section.cat{margin-bottom:22px}
+  section.cat h3{font-family:Arial,sans-serif;font-size:13px;letter-spacing:2px;color:var(--accent);
+    border-bottom:2px solid var(--line);padding-bottom:6px;margin:0 0 10px;text-transform:uppercase}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+  .item .num{display:inline-block;background:var(--ink);color:#fff;width:24px;height:24px;line-height:24px;text-align:center;
+    border-radius:50%;font-family:Arial,sans-serif;font-size:13px;margin-right:9px;vertical-align:top}
+  .item a{color:var(--ink);font-size:17px;font-weight:bold;text-decoration:none}
+  .item a:hover{color:var(--accent);text-decoration:underline}
+  .item .src{font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);margin:5px 0 3px 34px}
+  .item .angle{font-size:14.5px;margin:0 0 0 34px;color:#374151;font-style:italic}
+  footer{max-width:1200px;margin:0 auto;padding:0 26px 26px;color:var(--muted);font-family:Arial,sans-serif;font-size:12.5px}
+  select#dateselect{display:none}
+  @media (max-width:760px){
+    .layout{flex-direction:column}
+    nav{display:none}
+    select#dateselect{display:block;width:100%;padding:11px;font-size:15px;margin-bottom:14px;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+    main{padding:16px}
+    header h1{font-size:24px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dallas Barta Daily News</h1>
+  <p>15 verified news links daily — for the Bangladeshi community in Dallas–Fort Worth &amp; the Texas tri-state area</p>
+</header>
+<div class="layout">
+  <nav id="datenav"><h2>Dates</h2></nav>
+  <main>
+    <select id="dateselect" aria-label="Choose a date"></select>
+    <h2 class="daytitle" id="daytitle"></h2>
+    <div class="daymeta" id="daymeta"></div>
+    <div id="items"></div>
+  </main>
+</div>
+<footer>Sources are linked for the Dallas Barta editorial team. Only the last 10 days are kept.</footer>
+
+<script>
+const DAYS = [
+{
+  "dateLabel": "Wednesday, October 21, 2026",
+  "dateShort": "Wed, Oct 21, 2026",
+  "items": [
+    {"n":1,"cat":"Bangladesh","headline":"Bangladesh yet to receive Saudi response on execution of two nationals","source":"Reuters","published":"Oct 21, 2026, 4:20 AM UTC","angle":"Dhaka still waiting for verdict copies — direct follow-up for migrant-worker families","url":"https://www.reuters.com/world/asia-pacific/bangladesh-yet-receive-saudi-response-execution-two-nationals-2026-10-21/"},
+    {"n":2,"cat":"Bangladesh","headline":"President calls for national committee to ensure equal rights for all","source":"The Business Standard","published":"Oct 21, 2026 (time not listed)","angle":"Hindu community angle — said at Bangabhaban during Durga Puja / Bijoya Dashami greetings","url":"https://www.tbsnews.net/bangladesh/president-calls-national-committee-ensure-equal-rights-all-1579801"},
+    {"n":3,"cat":"Bangladesh","headline":"Abducted Chattogram businessman rescued; ex-army man among 6 held","source":"The Business Standard","published":"Oct 21, 2026, 5:15 PM (updated 8:05 PM)","angle":"Rescued in Teknaf after Tk20 lakh ransom demand — crime story with a viral video hook","url":"https://www.tbsnews.net/bangladesh/abducted-ctg-businessman-rescued-ex-army-man-among-6-held-1579416"},
+    {"n":4,"cat":"International","headline":"France to deploy troops ahead of Saturday protests","source":"TOB News","published":"Oct 21, 2026, 11:23 AM (updated 6:10 PM)","angle":"France — massive security operation planned after Oct 17 riots in Paris, Marseille, Lyon","url":"https://tob.news/france-to-deploy-troops-ahead-of-saturday-protests/"},
+    {"n":5,"cat":"International","headline":"Russia is willing in principle to join new Ukraine peace talks in November, Kremlin says","source":"The Business Standard (Reuters)","published":"Oct 21, 2026, 8:05 PM","angle":"Russia — Putin told US envoy Witkoff Moscow is open to trilateral talks with Ukraine and the US","url":"https://www.tbsnews.net/world/russia-willing-principle-join-new-ukraine-peace-talks-november-kremlin-says-1579721"},
+    {"n":6,"cat":"International","headline":"Malaysia to recruit 10,000 Bangladeshi workers free of cost","source":"TOB News","published":"Oct 15, 2026, 5:36 PM","angle":"Malaysia agreed to hire 10,000 Bangladeshi workers at zero cost and list 338 Bangladeshi recruiting agencies — direct impact on Bangladeshi families and future remittance","url":"https://tob.news/malaysia-to-recruit-10000-bangladeshi-workers-free-of-cost/"},
+    {"n":7,"cat":"US Visa / Immigration","headline":"USCIS filing deadline change: online rules for 2026","source":"VisaVerge (USCIS Policy Alert PA-2026-15)","published":"Alert issued Sep 23, 2026 | Effective Oct 23, 2026","angle":"Weekend/holiday extension changes for online filings — age cutoffs like a 21st birthday do NOT move","url":"https://www.visaverge.com/documentation/uscis-ends-next-business-day-extension-for-online-filings-under-policy-alert-pa-2026-15/"},
+    {"n":8,"cat":"US Visa / Immigration","headline":"October 2026 Visa Bulletin: FY2027 brings employment-based visa movement","source":"Ogletree Deakins","published":"Sep 30, 2026","angle":"USCIS accepting Dates for Filing chart in October — wider I-485 filing window this month","url":"https://ogletree.com/insights-resources/blog-posts/october-2026-visa-bulletin-fy-2027-brings-employment-based-visa-movement/"},
+    {"n":9,"cat":"Dallas / Texas","headline":"Dallas targets 32,000 downtown residents in decade-long redevelopment vision","source":"Dallas Focal / Focal News","published":"Oct 13, 2026","angle":"Vision 2036 to double downtown population as AT&T, Neiman Marcus and the Mavs/Stars plan exits","url":"https://focalnews.org/dallas-tx/local/dallas-targets-32000-downtown-residents-in-decade-long-redevelopment-vision"},
+    {"n":10,"cat":"Dallas / Texas","headline":"Arlington approves changes to proposed Dallas Cowboys lease extension","source":"KWBU (NPR)","published":"Oct 21, 2026, 6:38 AM CDT","angle":"7-2 council vote on AT&T Stadium deal — still needs closing conditions and Texas AG sign-off","url":"https://www.kwbu.org/news-from-across-texas/2026-10-21/arlington-approves-changes-to-proposed-dallas-cowboys-lease-extension"},
+    {"n":11,"cat":"Schools / Colleges","headline":"North Texas Food Bank, Dallas College, and UNIQLO partner to support families","source":"GlobeNewswire (press release)","published":"Oct 21, 2026","angle":"Service news — free drive-through food distribution Oct 28, 10 AM–12 PM, Dallas College North Lake, Irving; ~500 families","url":"https://www.globenewswire.com/news-release/2026/10/21/3385509/0/en/north-texas-food-bank-dallas-college-and-uniqlo-partner-to-support-families-through-fall-food-distribution.html"},
+    {"n":12,"cat":"Community","headline":"As Texas Gov. Abbott targets Muslim groups, his PAC receives millions from Muslim oil exec","source":"Religion News Service","published":"Oct 20, 2026","angle":"Muslim community — Pakistani American Muslim donor Javaid Anwar gave $15M+ to Abbott while Abbott investigates Islamic groups","url":"https://religionnews.com/2026/10/20/meet-gov-abbotts-biggest-donor-muslim-oil-exec-javaid-anwar/"},
+    {"n":13,"cat":"Science / Tech","headline":"Quantinuum's quantum error-correction breakthrough brings fault-tolerant computing closer","source":"Intelligent CIO North America","published":"Oct 21, 2026","angle":"Helios computer hit 99.9995% logical fidelity — 5 errors per million operations, 10x better since September","url":"https://www.intelligentcio.com/north-america/2026/10/21/talking-point-quantinuums-quantum-error-correction-breakthrough-brings-fault-tolerant-computing-closer/"},
+    {"n":14,"cat":"Sports","headline":"Bangladesh fold for 160 against Afghanistan in must-win match","source":"TOB News","published":"Oct 21, 2026, 9:13 PM","angle":"Cricket — Emon 70, Rashid Khan 4/31; Bangladesh must restrict Afghanistan to 119 or fewer to reach the final","url":"https://tob.news/bangladesh-fold-for-160-against-afghanistan-in-must-win-match/"},
+    {"n":15,"cat":"Entertainment","headline":"Ramayana advance booking: Ranbir-starrer film crosses ₹4 crore before release","source":"Dainik Jagran / The Daily Jagran","published":"Oct 21, 2026","angle":"Advance gross Rs4.78 crore as of Oct 21 — Rahman + Hans Zimmer music, releases Nov 5","url":"https://www.thedailyjagran.com/entertainment/news/ramayana-advance-booking-ranbirstarrer-film-crosses-4-crore-before-release-heres-the-latest-update-10333431"}
+  ]
+}
+];
+const CATS = ["Bangladesh","International","US Visa / Immigration","Dallas / Texas","Schools / Colleges","Community","Science / Tech","Sports","Entertainment"];
+let current = 0;
+function renderNav(){
+  const nav = document.getElementById('datenav');
+  nav.innerHTML = '<h2>Dates</h2>' + DAYS.map((d,i)=>
+    `<button class="datebtn${i===current?' active':''}" onclick="show(${i})">${d.dateShort}${i===0?'<span class="pill">Latest</span>':''}<span class="cnt">${d.items.length} links</span></button>`
+  ).join('');
+  const sel = document.getElementById('dateselect');
+  sel.innerHTML = DAYS.map((d,i)=>`<option value="${i}"${i===current?' selected':''}>${d.dateShort} · ${d.items.length} links</option>`).join('');
+  sel.onchange = e => show(parseInt(e.target.value,10));
+}
+function show(i){
+  current = i;
+  const d = DAYS[i];
+  renderNav();
+  document.getElementById('daytitle').textContent = d.dateLabel;
+  document.getElementById('daymeta').textContent = d.items.length + ' links · ' + CATS.filter(c=>d.items.some(x=>x.cat===c)).length + ' categories';
+  let html = '';
+  for(const c of CATS){
+    const its = d.items.filter(x=>x.cat===c);
+    if(!its.length) continue;
+    html += `<section class="cat"><h3>${c}</h3>` + its.map(x=>
+      `<div class="item"><span class="num">${x.n}</span><a href="${x.url}" target="_blank" rel="noopener">${x.headline}</a>` +
+      `<div class="src">Source: ${x.source} &nbsp;|&nbsp; Published: ${x.published}</div>` +
+      `<p class="angle">${x.angle}</p></div>`
+    ).join('') + '</section>';
+  }
+  document.getElementById('items').innerHTML = html;
+}
+show(0);
+</script>
+</body>
+</html>
