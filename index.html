@@ -65,369 +65,738 @@
 
 <script>
 const DAYS = [
-{
-  "dateLabel": "Sunday, October 25, 2026",
-  "dateShort": "Sun, Oct 25, 2026",
-  "items": [
-    {
-      "n": 1,
-      "cat": "Bangladesh",
-      "headline": "PM to leave for Japan tonight on four-day official visit",
-      "source": "The Business Standard (BSS)",
-      "published": "Oct 25, 2026, 11:40 AM (+06:00 Bangladesh time)",
-      "angle": "PM Tarique Rahman flies to Tokyo tonight for a four-day visit: talks with PM Sanae Takaichi, meetings with Japanese firms and JICA, and a keynote at the Bangladesh-Japan Economic Forum — trade, investment and worker-employment talks are on the agenda.",
-      "url": "https://www.tbsnews.net/bangladesh/pm-leave-japan-tonight-four-day-official-visit-1582091"
-    },
-    {
-      "n": 2,
-      "cat": "Bangladesh",
-      "headline": "Measles: Death toll reaches 1,227 as 5 more children die in 24hrs",
-      "source": "The Business Standard",
-      "published": "Oct 25, 2026, 04:45 PM (+06:00 Bangladesh time)",
-      "angle": "Update to the Oct 22 story — five more children died in 24 hours, taking the toll to 1,227 (104 lab-confirmed, 1,123 suspected); 1,280 new suspected cases took the tally to 221,164. Vaccination remains urgent for families with children.",
-      "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1227-5-more-children-die-24hrs-1582416"
-    },
-    {
-      "n": 3,
-      "cat": "Bangladesh",
-      "headline": "St Martin's tour season extended by 15 days; daily visitor cap raised to 3,500",
-      "source": "The Business Standard",
-      "published": "Oct 25, 2026, 04:55 PM (+06:00 Bangladesh time)",
-      "angle": "Tourists can visit St Martin's Island from Nov 1, 2026 to Mar 15, 2027 — 15 days longer than before — with the daily cap raised from 2,000 to 3,500 and a Tk100 conservation fee per visitor; overnight stays still barred in November.",
-      "url": "https://www.tbsnews.net/bangladesh/environment/st-martins-tour-season-extended-15-days-daily-visitor-cap-raised-3500-1582436"
-    },
-    {
-      "n": 4,
-      "cat": "Bangladesh",
-      "headline": "BB website back online after cybersecurity precaution",
-      "source": "The Business Standard (BSS)",
-      "published": "Oct 25, 2026, 09:45 AM (+06:00 Bangladesh time)",
-      "angle": "Economy — Bangladesh Bank's website is live again at 8am today after three days offline as a precaution against a global PHP vulnerability alert; the central bank says it monitored the situation before restoring access.",
-      "url": "https://www.tbsnews.net/economy/banking/bb-website-likely-be-back-online-today-after-3-days-1582001"
-    },
-    {
-      "n": 5,
-      "cat": "International",
-      "headline": "Explainer: How Ukraine's strikes on Russian energy sites deepened the rift with Trump",
-      "source": "Reuters (wire reprint)",
-      "published": "Oct 25, 2026, 10:01 AM UTC",
-      "angle": "Priority-3 world news — as Abu Dhabi talks loom in early November, Trump asked Musk to restore Ukraine's Starlink access after a disruption hampered Kyiv's drone ops; the rift matters for oil prices and US households, with Brent above $117.",
-      "url": "https://q106fm.com/2026/10/25/explainer-how-ukraines-strikes-on-russian-energy-sites-deepened-the-rift-with-trump/"
-    },
-    {
-      "n": 6,
-      "cat": "International",
-      "headline": "Indian diaspora celebrates Dandiya and Garba Night in Dhaka amid festive season",
-      "source": "Nation Press",
-      "published": "Oct 24, 2026 (time not listed; event held Oct 24)",
-      "angle": "Priority-2 — India-Bangladesh people-to-people ties: High Commissioner Dinesh Trivedi joined the Indian Association of Bangladesh's Dandiya and Garba Night in Dhaka on Oct 24, capping a run of mission visits to Durga Puja pandals across the city. This item also covers the Hindu-community slot.",
-      "url": "https://www.nationpress.com/international/indian-diaspora-holds-dandiya-night-in-dhaka"
-    },
-    {
-      "n": 7,
-      "cat": "US Visa / Immigration",
-      "headline": "US scraps automatic work permit extensions for H-4 spouses, tightens scrutiny of visa renewals",
-      "source": "India Weekly",
-      "published": "Oct 25, 2026, 10:30 AM UTC",
-      "angle": "USCIS has codified the end of the 540-day automatic EAD extension — H-4 spouses, adjustment-of-status applicants, asylum applicants and TPS holders must now have the renewed permit in hand to keep working; F-1 STEM OPT keeps a 180-day extension.",
-      "url": "https://www.indiaweekly.biz/us-scraps-automatic-work-permit-extensions-for-h-4-spouses-tightens-scrutiny-of-visa-renewals/"
-    },
-    {
-      "n": 8,
-      "cat": "US Visa / Immigration",
-      "headline": "SIJS Green Card Filing Open for Priority Dates Before January 1, 2025",
-      "source": "WHK Law Firm",
-      "published": "Oct 25, 2026, 02:20 AM UTC",
-      "angle": "The November Visa Bulletin keeps the SIJS Dates-for-Filing cutoff at Jan 1, 2025, so approved Special Immigrant Juveniles with earlier priority dates can file Form I-485 now — the window runs through November 2026 and a pending filing opens work-permit eligibility.",
-      "url": "https://www.whklawfirm.com/post/sijs-green-card-update-who-can-file-form-i-485-in-october-and-november-2026"
-    },
-    {
-      "n": 9,
-      "cat": "Dallas / Texas",
-      "headline": "State Fair of Texas attendance rebounds and more FW news",
-      "source": "CultureMap Fort Worth",
-      "published": "Oct 24, 2026, 03:00 PM UTC",
-      "angle": "The week's top Fort Worth news leads with a State Fair attendance rebound, plus the weekend's downtown Dallas I-30 closure (10 PM Sat to 5 AM Mon between I-35E and I-45/US 75) — plan alternate routes via Woodall Rodgers.",
-      "url": "https://fortworth.culturemap.com/news/city-life/top-stories-attendance-texas-state-fair/"
-    },
-    {
-      "n": 10,
-      "cat": "Dallas / Texas",
-      "headline": "Texas lawmakers weigh response to mailers falsely linked to transgender group",
-      "source": "Dallas Focal",
-      "published": "Oct 25, 2026 (time not listed)",
-      "angle": "Election-season mailers sent under the name of a seemingly fictitious 'Texas Transgender Student Union' are under criminal investigation by a West Texas DA; lawmakers from both parties say a new law may be needed — a caution for voters sorting real endorsements from fakes.",
-      "url": "https://focalnews.org/dallas-tx/politics/texas-lawmakers-weigh-response-to-mailers-falsely-linked-to-transgender-group"
-    },
-    {
-      "n": 11,
-      "cat": "Schools / Colleges",
-      "headline": "Texas custodian Marilyn Hampton breaks down in tears as new elementary school is named in her honor",
-      "source": "New York Post",
-      "published": "Oct 25, 2026 (time not listed)",
-      "angle": "Aubrey ISD — right in Denton County — surprised retiring custodian Marilyn Hampton, 39 years on the job, by naming its new Elementary School Number Five after her; the campus opens next August.",
-      "url": "https://nypost.com/2026/10/25/us-news/texas-custodian-marilyn-hampton-breaks-down-in-tears-as-new-elementary-school-is-named-in-her-honor/"
-    },
-    {
-      "n": 12,
-      "cat": "Community",
-      "headline": "Zohran Mamdani casts his midterm ballot as first day of early voting kicks off in NYC",
-      "source": "New York Post",
-      "published": "Oct 24, 2026 (time not listed)",
-      "angle": "Muslim community (US) — New York City's first Muslim mayor voted at the Met on day one of early voting; 86,215 New Yorkers cast ballots Saturday, slightly above last year's first-day figure, ahead of the Nov 3 midterms.",
-      "url": "https://nypost.com/2026/10/24/us-news/zohran-mamdani-casts-his-midterm-ballot-as-first-day-of-early-voting-kicks-off-in-nyc/"
-    },
-    {
-      "n": 13,
-      "cat": "Science / Tech",
-      "headline": "Creating 'satellite maps' of thousands of proteins across tissue could transform drug therapies",
-      "source": "MedicalXpress (PNAS paper)",
-      "published": "Oct 24, 2026 (time not listed)",
-      "angle": "A new hex-MASP technique maps thousands of proteins across whole tissue — 'satellite maps' that show where antibody drugs actually go in the brain — already flagging new Alzheimer's drug-target candidates before costly trials.",
-      "url": "https://medicalxpress.com/news/2026-10-satellite-thousands-proteins-tissue-drug.html"
-    },
-    {
-      "n": 14,
-      "cat": "Sports",
-      "headline": "Bangladesh vs West Indies Test: Free Entry for Fans in Mirpur",
-      "source": "BDCricTime (BCB press release)",
-      "published": "Oct 24, 2026, 08:37 PM (+06:00 Bangladesh time)",
-      "angle": "Fans can watch the first Test vs West Indies (Oct 28–Nov 1, Mirpur) free from the North and South stands all five days; Grand Stand and VIP areas are excluded — a follow-up to the Oct 23 squad announcement.",
-      "url": "https://bdcrictime.com/bangladesh-vs-west-indies-test-free-entry-for-fans-in-mirpur"
-    },
-    {
-      "n": 15,
-      "cat": "Entertainment",
-      "headline": "Udta Teer Box Office: Ayushmann Khurrana Starrer Sees 77% Surge on Second Day",
-      "source": "Zoom TV",
-      "published": "Oct 25, 2026, 02:12 PM IST",
-      "angle": "The Ayushmann Khurrana–Sara Ali Khan spy comedy jumped 77% on Saturday to Rs 7.25 crore net, crossing Rs 10 crore in two days on strong word of mouth in urban multiplexes — a weekend watchlist pick for the South Asian community.",
-      "url": "https://www.zoomtventertainment.com/bollywood/udta-teer-box-office-day-two-collection-ayushmann-khurrana-article-156401558"
-    }  ,
-    {
-      "n": 16,
-      "cat": "Hindu Community",
-      "headline": "Durga Puja festivities spark Tk 110b business boom",
-      "source": "The Financial Express Bangladesh",
-      "published": "Oct 24, 2026 (Saturday print edition; time not listed)",
-      "angle": "Added at Angcon's request — Sharadiya Durga Puja, the Hindu community's largest religious festival, generated an estimated Tk 110 billion in business this year.",
-      "url": "https://thefinancialexpress.com.bd/trade/durga-puja-festivities-spark-tk-110b-business-boom"
-    },
-    {
-      "n": 17,
-      "cat": "Entertainment",
-      "headline": "Your weekend in Arlington: Ed Sheeran at the stadium, live country, fall festival, and the downtown market",
-      "source": "Arlington Network",
-      "published": "Oct 20, 2026, 12:38 PM CDT",
-      "angle": "Added at Angcon's request — Ed Sheeran's LOOP Tour played AT&T Stadium on Saturday night (Oct 24, 5:30 PM) with Macklemore, Lukas Graham and Aaron Rowe opening; one of the biggest pop nights in North Texas this year.",
-      "url": "https://arlingtonnetwork.com/your-weekend-in-arlington-ed-sheeran-at-the-stadium-live-country-fall-festival-and-the-downtown-market/"
-    }
-  ]
-},
-{
-  "dateLabel": "Saturday, October 24, 2026",
-  "dateShort": "Sat, Oct 24, 2026",
-  "items": [
-    {
-      "n": 1,
-      "cat": "Bangladesh",
-      "headline": "Charge sheet filed against Hasina, 44 others over killing of Emdad during July Uprising",
-      "source": "The Business Standard",
-      "published": "Oct 24, 2026, 03:30 PM (+06:00 Bangladesh time)",
-      "angle": "Police filed a charge sheet against Hasina and 44 others over the killing of car driver Emdadul Haque in Dhaka's Badda during the July Uprising; 77 others named in the FIR were recommended for discharge.",
-      "url": "https://www.tbsnews.net/bangladesh/court/charge-sheet-filed-against-hasina-44-others-over-killing-emdad-during-july-uprising"
-    },
-    {
-      "n": 2,
-      "cat": "Bangladesh",
-      "headline": "Shots fired at singer Asif Akbar's parked car in Moghbazar",
-      "source": "The Business Standard",
-      "published": "Oct 24, 2026, 09:30 AM (+06:00 Bangladesh time)",
-      "angle": "Unidentified assailants fired at singer and ex-BCB director Asif Akbar's parked car in Moghbazar early today; he was not inside and no casualties were reported.",
-      "url": "https://www.tbsnews.net/bangladesh/crime/shots-fired-singer-asif-akbars-parked-car-moghbazar-1581311"
-    },
-    {
-      "n": 3,
-      "cat": "Bangladesh",
-      "headline": "18 held over banned Chhatra League's flash procession in Cumilla",
-      "source": "The Business Standard",
-      "published": "Oct 24, 2026, 04:50 PM (+06:00 Bangladesh time)",
-      "angle": "Police arrested 18 people after banned Chhatra League activists staged a flash procession in Cumilla city during Friday's Juma sermon, identified from video footage.",
-      "url": "https://www.tbsnews.net/bangladesh/crime/18-held-over-banned-chhatra-leagues-flash-procession-cumilla-1581611"
-    },
-    {
-      "n": 4,
-      "cat": "Bangladesh",
-      "headline": "Chinese firm plans $100 million beverage can factory in Bangladesh",
-      "source": "Deshweek (reporting The Business Standard)",
-      "published": "Oct 24, 2026, 09:38 AM UTC",
-      "angle": "Chinese firm Alu Hi-Tech will invest $100M in a beverage-can factory at Gazipur's Kaliakoir Hi-Tech Park (1 billion cans a year, 90% for export) once its gas connection is resolved — a jobs and export story for Bangladesh.",
-      "url": "https://deshweek.com/2026/10/24/chinese-firm-plans-100-million-beverage-can-factory-in-bangladesh/"
-    },
-    {
-      "n": 5,
-      "cat": "International",
-      "headline": "Oil prices near six-month high as Houthis intensify attacks on Saudi",
-      "source": "Business Post (reporting Reuters figures)",
-      "published": "Oct 24, 2026, 09:48 AM WAT (+01:00)",
-      "angle": "Priority-1 — Brent settled at $116.72, its highest since April 29 and up 6% on the week, after Houthi strikes on Saudi sites and Aramco's evacuation of its Dhahran HQ; higher pump and grocery prices are coming for DFW households. Update to the Oct 23 oil story.",
-      "url": "https://businesspost.ng/economy/oil-prices-nears-six-month-high-as-houthis-intensify-attacks-on-saudi/"
-    },
-    {
-      "n": 6,
-      "cat": "International",
-      "headline": "'Website is secure': London mission denies control over visa servers",
-      "source": "The Business Standard",
-      "published": "Oct 24, 2026, 05:05 PM (+06:00 Bangladesh time)",
-      "angle": "Priority-1 for US Bangladeshis — the London mission says its website is secure and visa servers are run centrally from Dhaka, warning UK Bangladeshis against misleading social-media claims; a reminder for diaspora families that consular tech problems sit with Dhaka, not the local mission.",
-      "url": "https://www.tbsnews.net/bangladesh/migration/website-secure-london-mission-denies-control-over-visa-servers-1581631"
-    },
-    {
-      "n": 7,
-      "cat": "US Visa / Immigration",
-      "headline": "H-1B $100K Fee: Current Status",
-      "source": "Harris Beach Murtha",
-      "published": "Oct 22, 2026 (per search listing; page itself undated)",
-      "angle": "USCIS is adjudicating overseas H-1B petitions again without the $100,000 fee after two court orders vacated it, though the administration extended the fee to Sept 21, 2027 and is appealing — DFW employers and workers should still plan for the appeal.",
-      "url": "https://www.harrisbeachmurtha.com/insights/current-status-of-the-100000-h-1b-fee-and-related-news/"
-    },
-    {
-      "n": 8,
-      "cat": "US Visa / Immigration",
-      "headline": "Trump administration says it has revoked more than 300,000 visas",
-      "source": "Times of Bangladesh (tob.news)",
-      "published": "Oct 21, 2026, 09:18 AM (updated 01:43 PM; timezone not listed)",
-      "angle": "The State Department says 300,000+ visas have been revoked since Jan 2025, up from 175,000 in August; B1/B2 visas of asylum seekers are next in line per AP-obtained documents — check status before travel.",
-      "url": "https://tob.news/trump-administration-says-it-has-revoked-more-than-300000-visas/"
-    },
-    {
-      "n": 9,
-      "cat": "Dallas / Texas",
-      "headline": "I-30 through downtown Dallas to close for much of weekend",
-      "source": "CultureMap Dallas",
-      "published": "Oct 21, 2026 (updated Oct 21, 2026; time not listed)",
-      "angle": "Weekend travel warning: all lanes of I-30 through downtown Dallas close 10 PM Saturday to 5 AM Monday between I-35E and I-45/US 75 — plan alternate routes.",
-      "url": "https://dallas.culturemap.com/news/city-life/i30-closed-downtown-october-24/"
-    },
-    {
-      "n": 10,
-      "cat": "Schools / Colleges",
-      "headline": "Building the future of Obadiah Knight Elementary School",
-      "source": "Dallas ISD (Bond program)",
-      "published": "Oct 21, 2026 (date shown on source page)",
-      "angle": "Dallas ISD's 2026 Bond will replace century-old Obadiah Knight Elementary ($27M; design done by March 2027, new campus opens fall 2030) — a long-term facilities win for Dallas families.",
-      "url": "https://bond.dallasisd.org/news-events/bond-news/bond-news-post-page/~board/bond-highlights/post/building-the-future-of-obadiah-knight-elementary-school"
-    },
-    {
-      "n": 11,
-      "cat": "Community",
-      "headline": "Foreign Terrorist Organization Supports Gina Hinojosa's Campaign",
-      "source": "Greg Abbott campaign (press release)",
-      "published": "Oct 20, 2026 (press release)",
-      "angle": "Muslim community + Texas — the Abbott campaign publicized CAIR Action's backing of Democratic governor candidate Gina Hinojosa, making Muslim voters a campaign flashpoint; campaign release, framed from the Abbott side. This item also covers the Dallas/Texas slot (the Archer air-taxi item was dropped to keep 15).",
-      "url": "https://www.gregabbott.com/foreign-terrorist-organization-supports-gina-hinojosas-campaign/"
-    },
-    {
-      "n": 12,
-      "cat": "Community",
-      "headline": "Temple committee alleges land grab, mutation delays in Faridpur",
-      "source": "The Business Standard",
-      "published": "Oct 24, 2026, 12:25 AM (+06:00 Bangladesh time)",
-      "angle": "Hindu community — the committee of a 350-year-old Kali temple in Faridpur's Nagarkanda says shops are being built on its devattor land despite administrative orders, and demands mutation of the property into the temple's name.",
-      "url": "https://www.tbsnews.net/bangladesh/temple-committee-alleges-land-grab-mutation-delays-faridpur-1581241"
-    },
-    {
-      "n": 13,
-      "cat": "Science / Tech",
-      "headline": "Glowing plants reveal immune responses around infection sites via two colors",
-      "source": "phys.org (Nature Plants paper)",
-      "published": "Oct 23, 2026 (time not listed)",
-      "angle": "A two-color bioluminescent reporter lets plants visibly signal immune responses around infection sites — a step toward 'sentinel' crops that report disease or nutrient stress.",
-      "url": "https://phys.org/news/2026-10-reveal-immune-responses-infection-sites.html"
-    },
-    {
-      "n": 14,
-      "cat": "Sports",
-      "headline": "Flagg injures shoulder on hard foul by Pacers' Nesmith",
-      "source": "theScore",
-      "published": "Oct 24, 2026 (time not listed)",
-      "angle": "Mavericks star Cooper Flagg left Friday's 121-105 win over Indiana with left shoulder soreness after a flagrant-1 foul; he had 14 points and 6 assists in 17 minutes — DFW fans await the injury update.",
-      "url": "https://www.thescore.com/nba/news/3632908/flagg-injures-shoulder-on-hard-foul-by-pacers-nesmith"
-    },
-    {
-      "n": 15,
-      "cat": "Entertainment",
-      "headline": "Saiyaara fame Shaan R Grover headlines Chand Mohammad's Junglywood, trailer to drop soon",
-      "source": "Bollywood Hungama",
-      "published": "Oct 24, 2026, 01:01 PM IST",
-      "angle": "Saiyaara breakout Shaan R Grover headlines Junglywood, a dark-comedy thriller satirizing Bollywood's insider-vs-outsider nepotism debate; trailer drops soon.",
-      "url": "https://www.bollywoodhungama.com/amp/news/bollywood/saiyaara-fame-shaan-r-grover-headlines-chand-mohammads-junglywood-trailer-to-drop-soon/"
-    }
-  ]
-},
-{
-  "dateLabel": "Friday, October 23, 2026",
-  "dateShort": "Fri, Oct 23, 2026",
-  "items": [
-    {"n": 1, "cat": "Bangladesh", "headline": "Biman suspends Dammam flights until 25 Oct, Riyadh until 31 Oct", "source": "The Business Standard", "published": "Oct 23, 2026, 12:30 AM (+06:00 Bangladesh time)", "angle": "After the Oct 21 attack on Dammam's King Fahd airport, Biman halted Dammam flights through Oct 25 and Riyadh flights through Oct 31 — major disruption for Bangladesh's huge Saudi expat community; Jeddah and Medina flights still operating.", "url": "https://www.tbsnews.net/economy/aviation/biman-suspends-dammam-flights-until-25-oct-riyadh-until-31-oct-1580661"},
-    {"n": 2, "cat": "Bangladesh", "headline": "Bangladesh ambassador to Japan asked to stay in Dhaka during PM's visit", "source": "The Business Standard", "published": "Oct 22, 2026, 03:40 PM (+06:00 Bangladesh time)", "angle": "Unprecedented — envoy Md Daud Ali kept out of PM Tarique Rahman's Oct 26–29 Japan visit, where talks are expected to cover trade, investment and Bangladeshi-worker employment; the ministry cites illness, with no official explanation otherwise.", "url": "https://www.tbsnews.net/bangladesh/bangladesh-envoy-japan-returns-dhaka-due-illness-mofa-1580251"},
-    {"n": 3, "cat": "Bangladesh", "headline": "Fire guts 33 homes in Cox's Bazar's Kutubdia, no casualties", "source": "The Business Standard", "published": "Oct 23, 2026, 04:15 PM (+06:00 Bangladesh time)", "angle": "33 fishing-community homes were destroyed in Kutubdia early today, leaving families destitute; emergency aid is being arranged — a coastal-disaster story from a region many DFW readers have family ties to.", "url": "https://www.tbsnews.net/bangladesh/fire-guts-33-homes-coxs-bazars-kutubdia-no-casualties-1580941"},
-    {"n": 4, "cat": "Bangladesh", "headline": "35 more Bangladeshis repatriated from Europe", "source": "The Business Standard", "published": "Oct 23, 2026, 03:20 PM (+06:00 Bangladesh time)", "angle": "35 more returned from Italy (19), Greece (10) and Cyprus (6) on a chartered flight today; about 5,000 have returned under EU SOP deals so far — directly relevant to families weighing legal versus irregular migration routes to Europe.", "url": "https://www.tbsnews.net/bangladesh/35-more-bangladeshis-repatriated-europe-1580911"},
-    {"n": 5, "cat": "International", "headline": "Around 7,500 Bangladeshis held in Saudi Arabia: Shama Obaed", "source": "TIMES (tob.news, The Business Standard's digital platform)", "published": "Oct 23, 2026, 1:44 PM (updated 2:15 PM; timezone not listed)", "angle": "Priority-1 for US Bangladeshis — the state minister revealed about 7,500 Bangladeshis are held in Saudi prisons; Dhaka asked Riyadh for the court verdicts on the two Bangladeshis executed Oct 14, and the body of worker Md Shahed Ahmed (killed in the Riyadh airport attack) arrived today. Update to the Oct 21 Saudi-executions story.", "url": "https://tob.news/around-7500-bangladeshis-held-in-saudi-arabia-shama-obaed/"},
-    {"n": 6, "cat": "International", "headline": "Oil prices rise more than 1% as supply concerns linger", "source": "Reuters (wire reprint via Cruisin' 929)", "published": "Oct 22, 2026, 9:05 PM (updated Oct 23, 7:33 AM UTC)", "angle": "Priority-1 — Brent hit $114.47 a barrel, its highest since May, heading for a third straight weekly gain after Houthi attacks on Saudi Arabia and Aramco's evacuation of its Dhahran HQ; higher gas and grocery costs are coming for DFW households.", "url": "https://cruisin929.com/2026/10/22/oil-little-changed-as-supply-concern-lingers-amid-houthi-attacks-on-saudi-arabia/"},
-    {"n": 7, "cat": "US Visa / Immigration", "headline": "November 2026 Visa Bulletin: Family Dates Jump a Full Year", "source": "Murthy Law Firm", "published": "Oct 22, 2026, posted 14:16 (timezone not listed)", "angle": "The State Department released the November 2026 bulletin on Oct 22: F1, F2B, F3 and F4 advanced a full year for most countries; EB-2 moved forward 3 months, EB-3 1 month, with no retrogression; USCIS will use the Dates for Filing chart for all November adjustment-of-status filings — directly relevant to DFW readers in the green-card queue.", "url": "https://www.murthy.com/2026/10/22/november-2026-visa-bulletin/"},
-    {"n": 8, "cat": "US Visa / Immigration", "headline": "Trump administration oversaw 980,000 deportations during first 18 months", "source": "Reuters", "published": "Oct 22, 2026, 21:56 UTC", "angle": "Enforcement reality for DFW immigrant families: a Migration Policy Institute report finds only 20% of deportations involved a criminal conviction (71% of those with 2+ years of US residence had none); the State Department says 300,000+ visas were revoked.", "url": "https://www.reuters.com/legal/government/trump-administration-oversaw-980000-deportations-during-first-18-months-2026-10-22/"},
-    {"n": 9, "cat": "Dallas / Texas", "headline": "Texas employment growth drops below long-term average as 19,000 jobs shed: Dallas Fed", "source": "FOX 7 Austin", "published": "Oct 22, 2026 (time not listed)", "angle": "Texas lost 18,900 jobs in September — the biggest monthly drop since June 2025 — and the Dallas Fed cut its 2026 growth forecast; a labor-market reality check for DFW job seekers and small businesses.", "url": "https://fox7austin.com/news/texas-employment-growth-drops-below-historical-average-19000-jobs-shed-dallas-fed"},
-    {"n": 10, "cat": "Schools / Colleges", "headline": "Dallas ISD students set record number of college credits earned", "source": "Dallas ISD (The Hub)", "published": "Date not shown on source page (search index suggests ~Oct 21, 2026)", "angle": "A record 1,305 Dallas ISD students earned associate degrees in 2025–26 through P-TECH and Early College programs, more than double the 2020 figure — useful for families considering early-college pathways.", "url": "https://thehub.dallasisd.org/dallas-isd-news/dallas-isd-news-post-page/~board/dallas-isd-news/post/dallas-isd-students-set-record-number-of-college-credits-earned"},
-    {"n": 11, "cat": "Community", "headline": "Talarico draws scrutiny for meet-and-greet with Muslim leaders", "source": "The Christian Post", "published": "Oct 22, 2026 (time not listed)", "angle": "Muslim community + Texas — Senate candidate James Talarico met DFW Muslim leaders (including Richardson Mayor Amir Omar, Irving Councilman Fahad Ahmed and Rep. Salman Bhojani), putting the Muslim community's political weight in Texas races in the spotlight. Conservative outlet; the story is framed from that angle.", "url": "https://www.christianpost.com/news/talarico-draws-scrutiny-for-meet-and-greet-with-muslim-leaders.html"},
-    {"n": 12, "cat": "Community", "headline": "Feature (Oct 20): All citizens have equal rights, no one is a minority: Shama Obaed", "source": "The Business Standard", "published": "Oct 20, 2026, 10:35 AM (+06:00 Bangladesh time)", "angle": "Hindu community — post-Durga Puja, the state minister for foreign affairs told Hindu devotees in Faridpur the government rejects the word 'minority' and pledges equal rights and security for all faiths; the clearest post-festival statement of the government's minority-rights position.", "url": "https://www.tbsnews.net/bangladesh/all-citizens-have-equal-rights-no-one-minority-shama-obaed-1578051"},
-    {"n": 13, "cat": "Science / Tech", "headline": "Molecular locking strategy enables efficient and scalable organic solar cells", "source": "TechXplore", "published": "Oct 22, 2026 (5:00 PM EDT per page metadata)", "angle": "A Chinese Academy of Sciences team reported in the journal Joule a method achieving a record 18.8% active-area efficiency in large-area organic solar modules — a step toward cheaper, scalable solar panels.", "url": "https://techxplore.com/news/2026-10-molecular-strategy-enables-efficient-scalable.html"},
-    {"n": 14, "cat": "Sports", "headline": "Bangladesh announces squad for first Test against West Indies", "source": "The Business Standard", "published": "Oct 23, 2026, 02:50 PM (+06:00 Bangladesh time)", "angle": "Star pacer Taskin Ahmed returns to the 15-man squad for the first Test starting Oct 28 at Mirpur, as Bangladesh (4th in the WTC standings) push for a 2027 final berth — fresh this morning.", "url": "https://www.tbsnews.net/sports/bangladesh-announces-squad-first-test-against-west-indies-1580891"},
-    {"n": 15, "cat": "Entertainment", "headline": "New Bollywood movies releasing this Friday, October 23: Udta Teer, Tum Mere Ho, Tu Hai Meri Kiran & more", "source": "Filmibeat", "published": "Oct 23, 2026, 10:35 AM IST", "angle": "Today's Bollywood lineup includes the Ayushmann Khurrana–Sara Ali Khan spy comedy 'Udta Teer' plus romantic dramas 'Tum Mere Ho' and 'Tu Hai Meri Kiran' — a weekend watchlist for the South Asian community.", "url": "https://www.filmibeat.com/top-listing/new-bollywood-movies-releasing-this-friday-oct-23-udta-teer-tum-mere-ho-tu-hai-meri-kiran-and-many-more-2-9254.html"}
-  ]
-},
-{
-  "dateLabel": "Thursday, October 22, 2026",
-  "dateShort": "Thu, Oct 22, 2026",
-  "items": [
-    {"n":1,"cat":"Bangladesh","headline":"3,000 tourists rescued after UPDF fires at tourists, law enforcers in Sajek: ISPR","source":"The Business Standard","published":"Oct 22, 2026, 4:50 pm (last modified 5:03 pm)","angle":"UPDF members fired 30\u201340 rounds at tourists and law enforcers at a road blockade in Rangamati's Sajek; Army and police evacuated about 3,000 stranded tourists, no casualties reported \u2014 a major security scare in a top tourist destination.","url":"https://www.tbsnews.net/bangladesh/3000-tourists-rescued-after-updf-fires-tourists-law-enforcers-sajek-ispr-1580311"},
-    {"n":2,"cat":"Bangladesh","headline":"Measles: Death toll reaches 1,207 as 2 more children die","source":"The Business Standard","published":"Oct 22, 2026, 3:25 pm (last modified 3:26 pm)","angle":"The measles crisis keeps worsening \u2014 1,207 deaths and 217,760 suspected cases nationwide; families with kids need to know vaccination is urgent.","url":"https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1207-2-more-children-die-1580236"},
-    {"n":3,"cat":"Bangladesh","headline":"Bangladesh seeks $3.77b on top of WB loans for LNG import, food security in FY27","source":"The Business Standard","published":"Oct 22, 2026, 10:00 am (last modified 10:11 am)","angle":"Dhaka seeks $2.77b in project financing plus $1b budget support for LNG imports, banking reform and food security, alongside a $10b three-year framework \u2014 LNG costs feed straight into electricity prices back home.","url":"https://www.tbsnews.net/bangladesh/bangladesh-seeks-377b-top-wb-loans-lng-import-food-security-fy27-1579921"},
-    {"n":4,"cat":"International","headline":"Massive strikes hit Kyiv hours after Putin agrees to fresh peace talks","source":"CNN","published":"Oct 21, 2026 (updated morning of Oct 22)","angle":"Update to Oct 21 Russia-talks story \u2014 Russia hit Kyiv with 21 missiles and 210 drones overnight (2 killed, 34 injured) hours after Putin agreed in principle to US-mediated trilateral talks; a shock to energy and food prices that reaches US households.","url":"https://www.cnn.com/2026/10/21/europe/us-envoy-witkoff-putin-talks-russia-ukraine-intl"},
-    {"n":5,"cat":"International","headline":"U.S. and Israel are planning for a possible post-midterms attack on Iran","source":"NPR Up First (via WUOT)","published":"Oct 22, 2026, 4:57 AM EDT","angle":"Priority-1 world news \u2014 a possible US-Israel strike on Iran after the midterms would spike oil prices (Brent around $109) and put millions of Bangladeshi migrant workers in the Gulf at risk.","url":"https://www.wuot.org/2026-10-22/morning-news-brief"},
-    {"n":6,"cat":"US Visa / Immigration","headline":"USCIS May Stop Deferring to Prior Approvals: What the Proposed Rule Means for H-1B and L-1 Extensions","source":"Klug Law Firm","published":"Oct 19, 2026, 5:18 PM UTC (rule proposed in Federal Register Oct 14, 2026; comments due Nov 13, 2026)","angle":"DHS proposed ending automatic deference to prior USCIS approvals \u2014 every H-1B, L-1, O-1 and TN extension could face fresh review, about 6,000+ more RFEs a year; DFW's H-1B holders should plan longer, tougher renewals.","url":"https://www.klugfirm.com/h-1b/uscis-deference-prior-approvals-proposed-rule/"},
-    {"n":7,"cat":"US Visa / Immigration","headline":"DHS Proposes New Rule Eliminating H-1B Grace Period","source":"Hall Render (WisLawNOW)","published":"Oct 20, 2026, 3:17 PM UTC (comment period closes Nov 10, 2026)","angle":"A separate DHS proposal would end the 60-day grace period \u2014 H-1B, L-1, O-1 and TN workers who lose their jobs could fall out of status immediately; a huge stakes change.","url":"https://www.wislawnow.com/2026/10/dhs-proposes-new-rule-eliminating-h-1b-grace-period/"},
-    {"n":8,"cat":"Dallas / Texas","headline":"FEMA Denies Texas Household Aid After July Floods","source":"The American Quorum (citing Texas Tribune)","published":"Oct 21, 2026 (time not listed)","angle":"FEMA refused Individual Assistance for households hit by the July 12\u2013Aug 4 floods in Hill Country and southwest Texas; Abbott's office says the state is reviewing the determination and has 30 days to appeal.","url":"https://www.theamericanquorum.com/state-news-texas-2026-10-21-a/"},
-    {"n":9,"cat":"Dallas / Texas","headline":"Blue Cross Blue Shield of Texas is dropping its Medicare Advantage plans","source":"KTTZ (KERA reporting)","published":"Oct 21, 2026, 7:15 AM CDT","angle":"People on BCBS Texas Medicare Advantage plans must move to a different plan starting in 2027 \u2014 Texas seniors should watch their mail.","url":"https://radio.kttz.org/show/daily-newscast/2026-10-21/october-21st-2026"},
-    {"n":10,"cat":"Schools / Colleges","headline":"Project Safe Schools investigation uncovers reporting failures at Dallas ISD, leading to $1 million settlement","source":"U.S. Department of Justice (press release)","published":"Oct 20, 2026","angle":"$145k penalty plus $855k in compliance reforms after Dallas ISD falsely certified compliance with state mandatory-reporting laws while taking federal special-education funds \u2014 a student-safety story for Dallas parents.","url":"https://www.justice.gov/usao-ndtx/pr/project-safe-schools-investigation-uncovers-reporting-failures-dallas-isd-leading-1"},
-    {"n":11,"cat":"Community","headline":"A Virtual Press Conference: The Case for a \u201cMosque Moratorium\u201d","source":"BanSharia (press release)","published":"Oct 19, 2026","angle":"Muslim community \u2014 33 conservative leaders urged Gov. Abbott to investigate mosques and pause new mosque approvals in Texas, following the state's Muslim Brotherhood/CAIR 'terrorist' designations; directly affects DFW's Muslim community.","url":"https://www.bansharia.com/release-press-release-a-virtual-press-conference-the-case-for-a-mosque-moratorium/"},
-    {"n":12,"cat":"Community","headline":"Festivities give way to farewell as Durga Puja ends","source":"Times of Bangladesh (tob.news)","published":"Oct 21, 2026, 4:00 am (updated 1:05 pm)","angle":"Hindu community \u2014 Bijoya Dashami on Oct 21 closed the six-day Durga Puja at 33,851 mandaps with idol immersions in Dhaka and Chattogram; also counts as a Bangladesh happening item.","url":"https://tob.news/festivities-give-way-to-farewell-as-durga-puja-ends/"},
-    {"n":13,"cat":"Science / Tech","headline":"Musk's political baggage clouds prospects for SpaceX-Tesla deal","source":"Reuters","published":"Oct 22, 2026 (time not listed)","angle":"Musk confirmed special committees at SpaceX and Tesla are reviewing a merger that would create a roughly $3.5T company \u2014 a tech earthquake with jobs and market implications; Democrats are already signaling scrutiny ahead of the Nov 3 midterms.","url":"https://www.reuters.com/legal/transactional/musks-political-baggage-clouds-prospects-spacex-tesla-deal-2026-10-22/"},
-    {"n":14,"cat":"Sports","headline":"Afghanistan beat Bangladesh to set up ODI tri-series final against Zimbabwe","source":"Geo Super TV","published":"Oct 22, 2026 (time not listed)","angle":"Update to Oct 21 story \u2014 Bangladesh were bowled out for 160 and lost by 7 wickets (87 balls to spare) in Sharjah on Oct 21, eliminated from the final; Rashid Khan 4/31, Parvez Hossain Emon 70 the lone fight.","url":"https://www.geosuper.tv/latest/60630-afghanistan-beat-bangladesh-to-set-up-odi-tri-series-final-against-zimbabwe"},
-    {"n":15,"cat":"Entertainment","headline":"Ranbir Kapoor apologises for 'goodness will end' faux pas at Ramayana event","source":"Cinema Express","published":"Oct 22, 2026, 5:58 am (updated)","angle":"At the Chennai musical event for the $100m+ epic Ramayana (A.R. Rahman, releasing worldwide Nov 5), Ranbir apologized for saying at a Kolkata Dussehra event that 'truth and goodness will end' instead of 'triumph' \u2014 the slip went viral and was heavily trolled.","url":"https://www.cinemaexpress.com/hindi/news/2026/Oct/22/ranbir-kapoor-apologises-for-goodness-will-end-faux-pas-at-ramayana-event"}
-  ]
-},
-{
-  "dateLabel": "Wednesday, October 21, 2026",
-  "dateShort": "Wed, Oct 21, 2026",
-  "items": [
-    {"n":1,"cat":"Bangladesh","headline":"Bangladesh yet to receive Saudi response on execution of two nationals","source":"Reuters","published":"Oct 21, 2026, 4:20 AM UTC","angle":"Dhaka still waiting for verdict copies — direct follow-up for migrant-worker families","url":"https://www.reuters.com/world/asia-pacific/bangladesh-yet-receive-saudi-response-execution-two-nationals-2026-10-21/"},
-    {"n":2,"cat":"Bangladesh","headline":"President calls for national committee to ensure equal rights for all","source":"The Business Standard","published":"Oct 21, 2026 (time not listed)","angle":"Hindu community angle — said at Bangabhaban during Durga Puja / Bijoya Dashami greetings","url":"https://www.tbsnews.net/bangladesh/president-calls-national-committee-ensure-equal-rights-all-1579801"},
-    {"n":3,"cat":"Bangladesh","headline":"Abducted Chattogram businessman rescued; ex-army man among 6 held","source":"The Business Standard","published":"Oct 21, 2026, 5:15 PM (updated 8:05 PM)","angle":"Rescued in Teknaf after Tk20 lakh ransom demand — crime story with a viral video hook","url":"https://www.tbsnews.net/bangladesh/abducted-ctg-businessman-rescued-ex-army-man-among-6-held-1579416"},
-    {"n":4,"cat":"International","headline":"France to deploy troops ahead of Saturday protests","source":"TOB News","published":"Oct 21, 2026, 11:23 AM (updated 6:10 PM)","angle":"France — massive security operation planned after Oct 17 riots in Paris, Marseille, Lyon","url":"https://tob.news/france-to-deploy-troops-ahead-of-saturday-protests/"},
-    {"n":5,"cat":"International","headline":"Russia is willing in principle to join new Ukraine peace talks in November, Kremlin says","source":"The Business Standard (Reuters)","published":"Oct 21, 2026, 8:05 PM","angle":"Russia — Putin told US envoy Witkoff Moscow is open to trilateral talks with Ukraine and the US","url":"https://www.tbsnews.net/world/russia-willing-principle-join-new-ukraine-peace-talks-november-kremlin-says-1579721"},
-    {"n":6,"cat":"International","headline":"Malaysia to recruit 10,000 Bangladeshi workers free of cost","source":"TOB News","published":"Oct 15, 2026, 5:36 PM","angle":"Malaysia agreed to hire 10,000 Bangladeshi workers at zero cost and list 338 Bangladeshi recruiting agencies — direct impact on Bangladeshi families and future remittance","url":"https://tob.news/malaysia-to-recruit-10000-bangladeshi-workers-free-of-cost/"},
-    {"n":7,"cat":"US Visa / Immigration","headline":"USCIS filing deadline change: online rules for 2026","source":"VisaVerge (USCIS Policy Alert PA-2026-15)","published":"Alert issued Sep 23, 2026 | Effective Oct 23, 2026","angle":"Weekend/holiday extension changes for online filings — age cutoffs like a 21st birthday do NOT move","url":"https://www.visaverge.com/documentation/uscis-ends-next-business-day-extension-for-online-filings-under-policy-alert-pa-2026-15/"},
-    {"n":8,"cat":"US Visa / Immigration","headline":"October 2026 Visa Bulletin: FY2027 brings employment-based visa movement","source":"Ogletree Deakins","published":"Sep 30, 2026","angle":"USCIS accepting Dates for Filing chart in October — wider I-485 filing window this month","url":"https://ogletree.com/insights-resources/blog-posts/october-2026-visa-bulletin-fy-2027-brings-employment-based-visa-movement/"},
-    {"n":9,"cat":"Dallas / Texas","headline":"Dallas targets 32,000 downtown residents in decade-long redevelopment vision","source":"Dallas Focal / Focal News","published":"Oct 13, 2026","angle":"Vision 2036 to double downtown population as AT&T, Neiman Marcus and the Mavs/Stars plan exits","url":"https://focalnews.org/dallas-tx/local/dallas-targets-32000-downtown-residents-in-decade-long-redevelopment-vision"},
-    {"n":10,"cat":"Dallas / Texas","headline":"Arlington approves changes to proposed Dallas Cowboys lease extension","source":"KWBU (NPR)","published":"Oct 21, 2026, 6:38 AM CDT","angle":"7-2 council vote on AT&T Stadium deal — still needs closing conditions and Texas AG sign-off","url":"https://www.kwbu.org/news-from-across-texas/2026-10-21/arlington-approves-changes-to-proposed-dallas-cowboys-lease-extension"},
-    {"n":11,"cat":"Schools / Colleges","headline":"North Texas Food Bank, Dallas College, and UNIQLO partner to support families","source":"GlobeNewswire (press release)","published":"Oct 21, 2026","angle":"Service news — free drive-through food distribution Oct 28, 10 AM–12 PM, Dallas College North Lake, Irving; ~500 families","url":"https://www.globenewswire.com/news-release/2026/10/21/3385509/0/en/north-texas-food-bank-dallas-college-and-uniqlo-partner-to-support-families-through-fall-food-distribution.html"},
-    {"n":12,"cat":"Community","headline":"As Texas Gov. Abbott targets Muslim groups, his PAC receives millions from Muslim oil exec","source":"Religion News Service","published":"Oct 20, 2026","angle":"Muslim community — Pakistani American Muslim donor Javaid Anwar gave $15M+ to Abbott while Abbott investigates Islamic groups","url":"https://religionnews.com/2026/10/20/meet-gov-abbotts-biggest-donor-muslim-oil-exec-javaid-anwar/"},
-    {"n":13,"cat":"Science / Tech","headline":"Quantinuum's quantum error-correction breakthrough brings fault-tolerant computing closer","source":"Intelligent CIO North America","published":"Oct 21, 2026","angle":"Helios computer hit 99.9995% logical fidelity — 5 errors per million operations, 10x better since September","url":"https://www.intelligentcio.com/north-america/2026/10/21/talking-point-quantinuums-quantum-error-correction-breakthrough-brings-fault-tolerant-computing-closer/"},
-    {"n":14,"cat":"Sports","headline":"Bangladesh fold for 160 against Afghanistan in must-win match","source":"TOB News","published":"Oct 21, 2026, 9:13 PM","angle":"Cricket — Emon 70, Rashid Khan 4/31; Bangladesh must restrict Afghanistan to 119 or fewer to reach the final","url":"https://tob.news/bangladesh-fold-for-160-against-afghanistan-in-must-win-match/"},
-    {"n":15,"cat":"Entertainment","headline":"Ramayana advance booking: Ranbir-starrer film crosses ₹4 crore before release","source":"Dainik Jagran / The Daily Jagran","published":"Oct 21, 2026","angle":"Advance gross Rs4.78 crore as of Oct 21 — Rahman + Hans Zimmer music, releases Nov 5","url":"https://www.thedailyjagran.com/entertainment/news/ramayana-advance-booking-ranbirstarrer-film-crosses-4-crore-before-release-heres-the-latest-update-10333431"}
-  ]
-}
+  {
+    "dateLabel": "Sunday, October 25, 2026",
+    "dateShort": "Sun, Oct 25, 2026",
+    "items": [
+      {
+        "n": 1,
+        "cat": "Bangladesh",
+        "headline": "PM to leave for Japan tonight on four-day official visit",
+        "source": "The Business Standard (BSS)",
+        "published": "Oct 25, 2026, 11:40 AM (+06:00 Bangladesh time)",
+        "angle": "PM Tarique Rahman flies to Tokyo tonight for a four-day visit: talks with PM Sanae Takaichi, meetings with Japanese firms and JICA, and a keynote at the Bangladesh-Japan Economic Forum — trade, investment and worker-employment talks are on the agenda.",
+        "url": "https://www.tbsnews.net/bangladesh/pm-leave-japan-tonight-four-day-official-visit-1582091"
+      },
+      {
+        "n": 2,
+        "cat": "Bangladesh",
+        "headline": "Measles: Death toll reaches 1,227 as 5 more children die in 24hrs",
+        "source": "The Business Standard",
+        "published": "Oct 25, 2026, 04:45 PM (+06:00 Bangladesh time)",
+        "angle": "Update to the Oct 22 story — five more children died in 24 hours, taking the toll to 1,227 (104 lab-confirmed, 1,123 suspected); 1,280 new suspected cases took the tally to 221,164. Vaccination remains urgent for families with children.",
+        "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1227-5-more-children-die-24hrs-1582416"
+      },
+      {
+        "n": 3,
+        "cat": "Bangladesh",
+        "headline": "St Martin's tour season extended by 15 days; daily visitor cap raised to 3,500",
+        "source": "The Business Standard",
+        "published": "Oct 25, 2026, 04:55 PM (+06:00 Bangladesh time)",
+        "angle": "Tourists can visit St Martin's Island from Nov 1, 2026 to Mar 15, 2027 — 15 days longer than before — with the daily cap raised from 2,000 to 3,500 and a Tk100 conservation fee per visitor; overnight stays still barred in November.",
+        "url": "https://www.tbsnews.net/bangladesh/environment/st-martins-tour-season-extended-15-days-daily-visitor-cap-raised-3500-1582436"
+      },
+      {
+        "n": 4,
+        "cat": "Bangladesh",
+        "headline": "BB website back online after cybersecurity precaution",
+        "source": "The Business Standard (BSS)",
+        "published": "Oct 25, 2026, 09:45 AM (+06:00 Bangladesh time)",
+        "angle": "Economy — Bangladesh Bank's website is live again at 8am today after three days offline as a precaution against a global PHP vulnerability alert; the central bank says it monitored the situation before restoring access.",
+        "url": "https://www.tbsnews.net/economy/banking/bb-website-likely-be-back-online-today-after-3-days-1582001"
+      },
+      {
+        "n": 5,
+        "cat": "International",
+        "headline": "Explainer: How Ukraine's strikes on Russian energy sites deepened the rift with Trump",
+        "source": "Reuters (wire reprint)",
+        "published": "Oct 25, 2026, 10:01 AM UTC",
+        "angle": "Priority-3 world news — as Abu Dhabi talks loom in early November, Trump asked Musk to restore Ukraine's Starlink access after a disruption hampered Kyiv's drone ops; the rift matters for oil prices and US households, with Brent above $117.",
+        "url": "https://q106fm.com/2026/10/25/explainer-how-ukraines-strikes-on-russian-energy-sites-deepened-the-rift-with-trump/"
+      },
+      {
+        "n": 6,
+        "cat": "International",
+        "headline": "Indian diaspora celebrates Dandiya and Garba Night in Dhaka amid festive season",
+        "source": "Nation Press",
+        "published": "Oct 24, 2026 (time not listed; event held Oct 24)",
+        "angle": "Priority-2 — India-Bangladesh people-to-people ties: High Commissioner Dinesh Trivedi joined the Indian Association of Bangladesh's Dandiya and Garba Night in Dhaka on Oct 24, capping a run of mission visits to Durga Puja pandals across the city. This item also covers the Hindu-community slot.",
+        "url": "https://www.nationpress.com/international/indian-diaspora-holds-dandiya-night-in-dhaka"
+      },
+      {
+        "n": 7,
+        "cat": "US Visa / Immigration",
+        "headline": "US scraps automatic work permit extensions for H-4 spouses, tightens scrutiny of visa renewals",
+        "source": "India Weekly",
+        "published": "Oct 25, 2026, 10:30 AM UTC",
+        "angle": "USCIS has codified the end of the 540-day automatic EAD extension — H-4 spouses, adjustment-of-status applicants, asylum applicants and TPS holders must now have the renewed permit in hand to keep working; F-1 STEM OPT keeps a 180-day extension.",
+        "url": "https://www.indiaweekly.biz/us-scraps-automatic-work-permit-extensions-for-h-4-spouses-tightens-scrutiny-of-visa-renewals/"
+      },
+      {
+        "n": 8,
+        "cat": "US Visa / Immigration",
+        "headline": "SIJS Green Card Filing Open for Priority Dates Before January 1, 2025",
+        "source": "WHK Law Firm",
+        "published": "Oct 25, 2026, 02:20 AM UTC",
+        "angle": "The November Visa Bulletin keeps the SIJS Dates-for-Filing cutoff at Jan 1, 2025, so approved Special Immigrant Juveniles with earlier priority dates can file Form I-485 now — the window runs through November 2026 and a pending filing opens work-permit eligibility.",
+        "url": "https://www.whklawfirm.com/post/sijs-green-card-update-who-can-file-form-i-485-in-october-and-november-2026"
+      },
+      {
+        "n": 9,
+        "cat": "Dallas / Texas",
+        "headline": "State Fair of Texas attendance rebounds and more FW news",
+        "source": "CultureMap Fort Worth",
+        "published": "Oct 24, 2026, 03:00 PM UTC",
+        "angle": "The week's top Fort Worth news leads with a State Fair attendance rebound, plus the weekend's downtown Dallas I-30 closure (10 PM Sat to 5 AM Mon between I-35E and I-45/US 75) — plan alternate routes via Woodall Rodgers.",
+        "url": "https://fortworth.culturemap.com/news/city-life/top-stories-attendance-texas-state-fair/"
+      },
+      {
+        "n": 10,
+        "cat": "Dallas / Texas",
+        "headline": "Texas lawmakers weigh response to mailers falsely linked to transgender group",
+        "source": "Dallas Focal",
+        "published": "Oct 25, 2026 (time not listed)",
+        "angle": "Election-season mailers sent under the name of a seemingly fictitious 'Texas Transgender Student Union' are under criminal investigation by a West Texas DA; lawmakers from both parties say a new law may be needed — a caution for voters sorting real endorsements from fakes.",
+        "url": "https://focalnews.org/dallas-tx/politics/texas-lawmakers-weigh-response-to-mailers-falsely-linked-to-transgender-group"
+      },
+      {
+        "n": 11,
+        "cat": "Schools / Colleges",
+        "headline": "Texas custodian Marilyn Hampton breaks down in tears as new elementary school is named in her honor",
+        "source": "New York Post",
+        "published": "Oct 25, 2026 (time not listed)",
+        "angle": "Aubrey ISD — right in Denton County — surprised retiring custodian Marilyn Hampton, 39 years on the job, by naming its new Elementary School Number Five after her; the campus opens next August.",
+        "url": "https://nypost.com/2026/10/25/us-news/texas-custodian-marilyn-hampton-breaks-down-in-tears-as-new-elementary-school-is-named-in-her-honor/"
+      },
+      {
+        "n": 12,
+        "cat": "Community",
+        "headline": "Zohran Mamdani casts his midterm ballot as first day of early voting kicks off in NYC",
+        "source": "New York Post",
+        "published": "Oct 24, 2026 (time not listed)",
+        "angle": "Muslim community (US) — New York City's first Muslim mayor voted at the Met on day one of early voting; 86,215 New Yorkers cast ballots Saturday, slightly above last year's first-day figure, ahead of the Nov 3 midterms.",
+        "url": "https://nypost.com/2026/10/24/us-news/zohran-mamdani-casts-his-midterm-ballot-as-first-day-of-early-voting-kicks-off-in-nyc/"
+      },
+      {
+        "n": 13,
+        "cat": "Science / Tech",
+        "headline": "Creating 'satellite maps' of thousands of proteins across tissue could transform drug therapies",
+        "source": "MedicalXpress (PNAS paper)",
+        "published": "Oct 24, 2026 (time not listed)",
+        "angle": "A new hex-MASP technique maps thousands of proteins across whole tissue — 'satellite maps' that show where antibody drugs actually go in the brain — already flagging new Alzheimer's drug-target candidates before costly trials.",
+        "url": "https://medicalxpress.com/news/2026-10-satellite-thousands-proteins-tissue-drug.html"
+      },
+      {
+        "n": 14,
+        "cat": "Sports",
+        "headline": "Bangladesh vs West Indies Test: Free Entry for Fans in Mirpur",
+        "source": "BDCricTime (BCB press release)",
+        "published": "Oct 24, 2026, 08:37 PM (+06:00 Bangladesh time)",
+        "angle": "Fans can watch the first Test vs West Indies (Oct 28–Nov 1, Mirpur) free from the North and South stands all five days; Grand Stand and VIP areas are excluded — a follow-up to the Oct 23 squad announcement.",
+        "url": "https://bdcrictime.com/bangladesh-vs-west-indies-test-free-entry-for-fans-in-mirpur"
+      },
+      {
+        "n": 15,
+        "cat": "Entertainment",
+        "headline": "Udta Teer Box Office: Ayushmann Khurrana Starrer Sees 77% Surge on Second Day",
+        "source": "Zoom TV",
+        "published": "Oct 25, 2026, 02:12 PM IST",
+        "angle": "The Ayushmann Khurrana–Sara Ali Khan spy comedy jumped 77% on Saturday to Rs 7.25 crore net, crossing Rs 10 crore in two days on strong word of mouth in urban multiplexes — a weekend watchlist pick for the South Asian community.",
+        "url": "https://www.zoomtventertainment.com/bollywood/udta-teer-box-office-day-two-collection-ayushmann-khurrana-article-156401558"
+      },
+      {
+        "n": 16,
+        "cat": "Hindu Community",
+        "headline": "Durga Puja festivities spark Tk 110b business boom",
+        "source": "The Financial Express Bangladesh",
+        "published": "Oct 24, 2026 (Saturday print edition; time not listed)",
+        "angle": "Added at Angcon's request — Sharadiya Durga Puja, the Hindu community's largest religious festival, generated an estimated Tk 110 billion in business this year.",
+        "url": "https://thefinancialexpress.com.bd/trade/durga-puja-festivities-spark-tk-110b-business-boom"
+      },
+      {
+        "n": 17,
+        "cat": "Entertainment",
+        "headline": "Your weekend in Arlington: Ed Sheeran at the stadium, live country, fall festival, and the downtown market",
+        "source": "Arlington Network",
+        "published": "Oct 20, 2026, 12:38 PM CDT",
+        "angle": "Added at Angcon's request — Ed Sheeran's LOOP Tour played AT&T Stadium on Saturday night (Oct 24, 5:30 PM) with Macklemore, Lukas Graham and Aaron Rowe opening; one of the biggest pop nights in North Texas this year.",
+        "url": "https://arlingtonnetwork.com/your-weekend-in-arlington-ed-sheeran-at-the-stadium-live-country-fall-festival-and-the-downtown-market/"
+      },
+      {
+        "n": 18,
+        "cat": "Bangladesh",
+        "headline": "Tongi child abuse case: Court denies bail to madrasah vice-principal",
+        "source": "The Business Standard (2 articles)",
+        "published": "Oct 25, 2026, 02:00 PM (+06:00 Bangladesh time)",
+        "angle": "Added at Angcon's request — one piece, two TBS sources: a 7-year-old first-grader at Qariul Quran International Madrasa, Tongi, was allegedly abused on Oct 19; her father confronted vice-principal Md Muslem Ahmed on Oct 21 and the clash went viral; the teacher was arrested and jailed, the child gave her court statement on Oct 22, and today (Oct 25) a Gazipur court denied the teacher bail. The madrasa principal's counter-case against the father is also under investigation, and police say reports of a drive to arrest the father are incorrect. Second source: <a href=\"https://www.tbsnews.net/bangladesh/tongi-abuse-allegation-police-seek-arrest-man-who-slapped-madrasah-teacher-1582096\" target=\"_blank\" rel=\"noopener\">TBS — GMP chief denies reports of drive to arrest child's father (Oct 25, 11:35 AM +06:00)</a>.",
+        "url": "https://www.tbsnews.net/bangladesh/court/tongi-child-abuse-case-court-denies-bail-madrasah-vice-principal-1582281"
+      }
+    ]
+  },
+  {
+    "dateLabel": "Saturday, October 24, 2026",
+    "dateShort": "Sat, Oct 24, 2026",
+    "items": [
+      {
+        "n": 1,
+        "cat": "Bangladesh",
+        "headline": "Charge sheet filed against Hasina, 44 others over killing of Emdad during July Uprising",
+        "source": "The Business Standard",
+        "published": "Oct 24, 2026, 03:30 PM (+06:00 Bangladesh time)",
+        "angle": "Police filed a charge sheet against Hasina and 44 others over the killing of car driver Emdadul Haque in Dhaka's Badda during the July Uprising; 77 others named in the FIR were recommended for discharge.",
+        "url": "https://www.tbsnews.net/bangladesh/court/charge-sheet-filed-against-hasina-44-others-over-killing-emdad-during-july-uprising"
+      },
+      {
+        "n": 2,
+        "cat": "Bangladesh",
+        "headline": "Shots fired at singer Asif Akbar's parked car in Moghbazar",
+        "source": "The Business Standard",
+        "published": "Oct 24, 2026, 09:30 AM (+06:00 Bangladesh time)",
+        "angle": "Unidentified assailants fired at singer and ex-BCB director Asif Akbar's parked car in Moghbazar early today; he was not inside and no casualties were reported.",
+        "url": "https://www.tbsnews.net/bangladesh/crime/shots-fired-singer-asif-akbars-parked-car-moghbazar-1581311"
+      },
+      {
+        "n": 3,
+        "cat": "Bangladesh",
+        "headline": "18 held over banned Chhatra League's flash procession in Cumilla",
+        "source": "The Business Standard",
+        "published": "Oct 24, 2026, 04:50 PM (+06:00 Bangladesh time)",
+        "angle": "Police arrested 18 people after banned Chhatra League activists staged a flash procession in Cumilla city during Friday's Juma sermon, identified from video footage.",
+        "url": "https://www.tbsnews.net/bangladesh/crime/18-held-over-banned-chhatra-leagues-flash-procession-cumilla-1581611"
+      },
+      {
+        "n": 4,
+        "cat": "Bangladesh",
+        "headline": "Chinese firm plans $100 million beverage can factory in Bangladesh",
+        "source": "Deshweek (reporting The Business Standard)",
+        "published": "Oct 24, 2026, 09:38 AM UTC",
+        "angle": "Chinese firm Alu Hi-Tech will invest $100M in a beverage-can factory at Gazipur's Kaliakoir Hi-Tech Park (1 billion cans a year, 90% for export) once its gas connection is resolved — a jobs and export story for Bangladesh.",
+        "url": "https://deshweek.com/2026/10/24/chinese-firm-plans-100-million-beverage-can-factory-in-bangladesh/"
+      },
+      {
+        "n": 5,
+        "cat": "International",
+        "headline": "Oil prices near six-month high as Houthis intensify attacks on Saudi",
+        "source": "Business Post (reporting Reuters figures)",
+        "published": "Oct 24, 2026, 09:48 AM WAT (+01:00)",
+        "angle": "Priority-1 — Brent settled at $116.72, its highest since April 29 and up 6% on the week, after Houthi strikes on Saudi sites and Aramco's evacuation of its Dhahran HQ; higher pump and grocery prices are coming for DFW households. Update to the Oct 23 oil story.",
+        "url": "https://businesspost.ng/economy/oil-prices-nears-six-month-high-as-houthis-intensify-attacks-on-saudi/"
+      },
+      {
+        "n": 6,
+        "cat": "International",
+        "headline": "'Website is secure': London mission denies control over visa servers",
+        "source": "The Business Standard",
+        "published": "Oct 24, 2026, 05:05 PM (+06:00 Bangladesh time)",
+        "angle": "Priority-1 for US Bangladeshis — the London mission says its website is secure and visa servers are run centrally from Dhaka, warning UK Bangladeshis against misleading social-media claims; a reminder for diaspora families that consular tech problems sit with Dhaka, not the local mission.",
+        "url": "https://www.tbsnews.net/bangladesh/migration/website-secure-london-mission-denies-control-over-visa-servers-1581631"
+      },
+      {
+        "n": 7,
+        "cat": "US Visa / Immigration",
+        "headline": "H-1B $100K Fee: Current Status",
+        "source": "Harris Beach Murtha",
+        "published": "Oct 22, 2026 (per search listing; page itself undated)",
+        "angle": "USCIS is adjudicating overseas H-1B petitions again without the $100,000 fee after two court orders vacated it, though the administration extended the fee to Sept 21, 2027 and is appealing — DFW employers and workers should still plan for the appeal.",
+        "url": "https://www.harrisbeachmurtha.com/insights/current-status-of-the-100000-h-1b-fee-and-related-news/"
+      },
+      {
+        "n": 8,
+        "cat": "US Visa / Immigration",
+        "headline": "Trump administration says it has revoked more than 300,000 visas",
+        "source": "Times of Bangladesh (tob.news)",
+        "published": "Oct 21, 2026, 09:18 AM (updated 01:43 PM; timezone not listed)",
+        "angle": "The State Department says 300,000+ visas have been revoked since Jan 2025, up from 175,000 in August; B1/B2 visas of asylum seekers are next in line per AP-obtained documents — check status before travel.",
+        "url": "https://tob.news/trump-administration-says-it-has-revoked-more-than-300000-visas/"
+      },
+      {
+        "n": 9,
+        "cat": "Dallas / Texas",
+        "headline": "I-30 through downtown Dallas to close for much of weekend",
+        "source": "CultureMap Dallas",
+        "published": "Oct 21, 2026 (updated Oct 21, 2026; time not listed)",
+        "angle": "Weekend travel warning: all lanes of I-30 through downtown Dallas close 10 PM Saturday to 5 AM Monday between I-35E and I-45/US 75 — plan alternate routes.",
+        "url": "https://dallas.culturemap.com/news/city-life/i30-closed-downtown-october-24/"
+      },
+      {
+        "n": 10,
+        "cat": "Schools / Colleges",
+        "headline": "Building the future of Obadiah Knight Elementary School",
+        "source": "Dallas ISD (Bond program)",
+        "published": "Oct 21, 2026 (date shown on source page)",
+        "angle": "Dallas ISD's 2026 Bond will replace century-old Obadiah Knight Elementary ($27M; design done by March 2027, new campus opens fall 2030) — a long-term facilities win for Dallas families.",
+        "url": "https://bond.dallasisd.org/news-events/bond-news/bond-news-post-page/~board/bond-highlights/post/building-the-future-of-obadiah-knight-elementary-school"
+      },
+      {
+        "n": 11,
+        "cat": "Community",
+        "headline": "Foreign Terrorist Organization Supports Gina Hinojosa's Campaign",
+        "source": "Greg Abbott campaign (press release)",
+        "published": "Oct 20, 2026 (press release)",
+        "angle": "Muslim community + Texas — the Abbott campaign publicized CAIR Action's backing of Democratic governor candidate Gina Hinojosa, making Muslim voters a campaign flashpoint; campaign release, framed from the Abbott side. This item also covers the Dallas/Texas slot (the Archer air-taxi item was dropped to keep 15).",
+        "url": "https://www.gregabbott.com/foreign-terrorist-organization-supports-gina-hinojosas-campaign/"
+      },
+      {
+        "n": 12,
+        "cat": "Community",
+        "headline": "Temple committee alleges land grab, mutation delays in Faridpur",
+        "source": "The Business Standard",
+        "published": "Oct 24, 2026, 12:25 AM (+06:00 Bangladesh time)",
+        "angle": "Hindu community — the committee of a 350-year-old Kali temple in Faridpur's Nagarkanda says shops are being built on its devattor land despite administrative orders, and demands mutation of the property into the temple's name.",
+        "url": "https://www.tbsnews.net/bangladesh/temple-committee-alleges-land-grab-mutation-delays-faridpur-1581241"
+      },
+      {
+        "n": 13,
+        "cat": "Science / Tech",
+        "headline": "Glowing plants reveal immune responses around infection sites via two colors",
+        "source": "phys.org (Nature Plants paper)",
+        "published": "Oct 23, 2026 (time not listed)",
+        "angle": "A two-color bioluminescent reporter lets plants visibly signal immune responses around infection sites — a step toward 'sentinel' crops that report disease or nutrient stress.",
+        "url": "https://phys.org/news/2026-10-reveal-immune-responses-infection-sites.html"
+      },
+      {
+        "n": 14,
+        "cat": "Sports",
+        "headline": "Flagg injures shoulder on hard foul by Pacers' Nesmith",
+        "source": "theScore",
+        "published": "Oct 24, 2026 (time not listed)",
+        "angle": "Mavericks star Cooper Flagg left Friday's 121-105 win over Indiana with left shoulder soreness after a flagrant-1 foul; he had 14 points and 6 assists in 17 minutes — DFW fans await the injury update.",
+        "url": "https://www.thescore.com/nba/news/3632908/flagg-injures-shoulder-on-hard-foul-by-pacers-nesmith"
+      },
+      {
+        "n": 15,
+        "cat": "Entertainment",
+        "headline": "Saiyaara fame Shaan R Grover headlines Chand Mohammad's Junglywood, trailer to drop soon",
+        "source": "Bollywood Hungama",
+        "published": "Oct 24, 2026, 01:01 PM IST",
+        "angle": "Saiyaara breakout Shaan R Grover headlines Junglywood, a dark-comedy thriller satirizing Bollywood's insider-vs-outsider nepotism debate; trailer drops soon.",
+        "url": "https://www.bollywoodhungama.com/amp/news/bollywood/saiyaara-fame-shaan-r-grover-headlines-chand-mohammads-junglywood-trailer-to-drop-soon/"
+      }
+    ]
+  },
+  {
+    "dateLabel": "Friday, October 23, 2026",
+    "dateShort": "Fri, Oct 23, 2026",
+    "items": [
+      {
+        "n": 1,
+        "cat": "Bangladesh",
+        "headline": "Biman suspends Dammam flights until 25 Oct, Riyadh until 31 Oct",
+        "source": "The Business Standard",
+        "published": "Oct 23, 2026, 12:30 AM (+06:00 Bangladesh time)",
+        "angle": "After the Oct 21 attack on Dammam's King Fahd airport, Biman halted Dammam flights through Oct 25 and Riyadh flights through Oct 31 — major disruption for Bangladesh's huge Saudi expat community; Jeddah and Medina flights still operating.",
+        "url": "https://www.tbsnews.net/economy/aviation/biman-suspends-dammam-flights-until-25-oct-riyadh-until-31-oct-1580661"
+      },
+      {
+        "n": 2,
+        "cat": "Bangladesh",
+        "headline": "Bangladesh ambassador to Japan asked to stay in Dhaka during PM's visit",
+        "source": "The Business Standard",
+        "published": "Oct 22, 2026, 03:40 PM (+06:00 Bangladesh time)",
+        "angle": "Unprecedented — envoy Md Daud Ali kept out of PM Tarique Rahman's Oct 26–29 Japan visit, where talks are expected to cover trade, investment and Bangladeshi-worker employment; the ministry cites illness, with no official explanation otherwise.",
+        "url": "https://www.tbsnews.net/bangladesh/bangladesh-envoy-japan-returns-dhaka-due-illness-mofa-1580251"
+      },
+      {
+        "n": 3,
+        "cat": "Bangladesh",
+        "headline": "Fire guts 33 homes in Cox's Bazar's Kutubdia, no casualties",
+        "source": "The Business Standard",
+        "published": "Oct 23, 2026, 04:15 PM (+06:00 Bangladesh time)",
+        "angle": "33 fishing-community homes were destroyed in Kutubdia early today, leaving families destitute; emergency aid is being arranged — a coastal-disaster story from a region many DFW readers have family ties to.",
+        "url": "https://www.tbsnews.net/bangladesh/fire-guts-33-homes-coxs-bazars-kutubdia-no-casualties-1580941"
+      },
+      {
+        "n": 4,
+        "cat": "Bangladesh",
+        "headline": "35 more Bangladeshis repatriated from Europe",
+        "source": "The Business Standard",
+        "published": "Oct 23, 2026, 03:20 PM (+06:00 Bangladesh time)",
+        "angle": "35 more returned from Italy (19), Greece (10) and Cyprus (6) on a chartered flight today; about 5,000 have returned under EU SOP deals so far — directly relevant to families weighing legal versus irregular migration routes to Europe.",
+        "url": "https://www.tbsnews.net/bangladesh/35-more-bangladeshis-repatriated-europe-1580911"
+      },
+      {
+        "n": 5,
+        "cat": "International",
+        "headline": "Around 7,500 Bangladeshis held in Saudi Arabia: Shama Obaed",
+        "source": "TIMES (tob.news, The Business Standard's digital platform)",
+        "published": "Oct 23, 2026, 1:44 PM (updated 2:15 PM; timezone not listed)",
+        "angle": "Priority-1 for US Bangladeshis — the state minister revealed about 7,500 Bangladeshis are held in Saudi prisons; Dhaka asked Riyadh for the court verdicts on the two Bangladeshis executed Oct 14, and the body of worker Md Shahed Ahmed (killed in the Riyadh airport attack) arrived today. Update to the Oct 21 Saudi-executions story.",
+        "url": "https://tob.news/around-7500-bangladeshis-held-in-saudi-arabia-shama-obaed/"
+      },
+      {
+        "n": 6,
+        "cat": "International",
+        "headline": "Oil prices rise more than 1% as supply concerns linger",
+        "source": "Reuters (wire reprint via Cruisin' 929)",
+        "published": "Oct 22, 2026, 9:05 PM (updated Oct 23, 7:33 AM UTC)",
+        "angle": "Priority-1 — Brent hit $114.47 a barrel, its highest since May, heading for a third straight weekly gain after Houthi attacks on Saudi Arabia and Aramco's evacuation of its Dhahran HQ; higher gas and grocery costs are coming for DFW households.",
+        "url": "https://cruisin929.com/2026/10/22/oil-little-changed-as-supply-concern-lingers-amid-houthi-attacks-on-saudi-arabia/"
+      },
+      {
+        "n": 7,
+        "cat": "US Visa / Immigration",
+        "headline": "November 2026 Visa Bulletin: Family Dates Jump a Full Year",
+        "source": "Murthy Law Firm",
+        "published": "Oct 22, 2026, posted 14:16 (timezone not listed)",
+        "angle": "The State Department released the November 2026 bulletin on Oct 22: F1, F2B, F3 and F4 advanced a full year for most countries; EB-2 moved forward 3 months, EB-3 1 month, with no retrogression; USCIS will use the Dates for Filing chart for all November adjustment-of-status filings — directly relevant to DFW readers in the green-card queue.",
+        "url": "https://www.murthy.com/2026/10/22/november-2026-visa-bulletin/"
+      },
+      {
+        "n": 8,
+        "cat": "US Visa / Immigration",
+        "headline": "Trump administration oversaw 980,000 deportations during first 18 months",
+        "source": "Reuters",
+        "published": "Oct 22, 2026, 21:56 UTC",
+        "angle": "Enforcement reality for DFW immigrant families: a Migration Policy Institute report finds only 20% of deportations involved a criminal conviction (71% of those with 2+ years of US residence had none); the State Department says 300,000+ visas were revoked.",
+        "url": "https://www.reuters.com/legal/government/trump-administration-oversaw-980000-deportations-during-first-18-months-2026-10-22/"
+      },
+      {
+        "n": 9,
+        "cat": "Dallas / Texas",
+        "headline": "Texas employment growth drops below long-term average as 19,000 jobs shed: Dallas Fed",
+        "source": "FOX 7 Austin",
+        "published": "Oct 22, 2026 (time not listed)",
+        "angle": "Texas lost 18,900 jobs in September — the biggest monthly drop since June 2025 — and the Dallas Fed cut its 2026 growth forecast; a labor-market reality check for DFW job seekers and small businesses.",
+        "url": "https://fox7austin.com/news/texas-employment-growth-drops-below-historical-average-19000-jobs-shed-dallas-fed"
+      },
+      {
+        "n": 10,
+        "cat": "Schools / Colleges",
+        "headline": "Dallas ISD students set record number of college credits earned",
+        "source": "Dallas ISD (The Hub)",
+        "published": "Date not shown on source page (search index suggests ~Oct 21, 2026)",
+        "angle": "A record 1,305 Dallas ISD students earned associate degrees in 2025–26 through P-TECH and Early College programs, more than double the 2020 figure — useful for families considering early-college pathways.",
+        "url": "https://thehub.dallasisd.org/dallas-isd-news/dallas-isd-news-post-page/~board/dallas-isd-news/post/dallas-isd-students-set-record-number-of-college-credits-earned"
+      },
+      {
+        "n": 11,
+        "cat": "Community",
+        "headline": "Talarico draws scrutiny for meet-and-greet with Muslim leaders",
+        "source": "The Christian Post",
+        "published": "Oct 22, 2026 (time not listed)",
+        "angle": "Muslim community + Texas — Senate candidate James Talarico met DFW Muslim leaders (including Richardson Mayor Amir Omar, Irving Councilman Fahad Ahmed and Rep. Salman Bhojani), putting the Muslim community's political weight in Texas races in the spotlight. Conservative outlet; the story is framed from that angle.",
+        "url": "https://www.christianpost.com/news/talarico-draws-scrutiny-for-meet-and-greet-with-muslim-leaders.html"
+      },
+      {
+        "n": 12,
+        "cat": "Community",
+        "headline": "Feature (Oct 20): All citizens have equal rights, no one is a minority: Shama Obaed",
+        "source": "The Business Standard",
+        "published": "Oct 20, 2026, 10:35 AM (+06:00 Bangladesh time)",
+        "angle": "Hindu community — post-Durga Puja, the state minister for foreign affairs told Hindu devotees in Faridpur the government rejects the word 'minority' and pledges equal rights and security for all faiths; the clearest post-festival statement of the government's minority-rights position.",
+        "url": "https://www.tbsnews.net/bangladesh/all-citizens-have-equal-rights-no-one-minority-shama-obaed-1578051"
+      },
+      {
+        "n": 13,
+        "cat": "Science / Tech",
+        "headline": "Molecular locking strategy enables efficient and scalable organic solar cells",
+        "source": "TechXplore",
+        "published": "Oct 22, 2026 (5:00 PM EDT per page metadata)",
+        "angle": "A Chinese Academy of Sciences team reported in the journal Joule a method achieving a record 18.8% active-area efficiency in large-area organic solar modules — a step toward cheaper, scalable solar panels.",
+        "url": "https://techxplore.com/news/2026-10-molecular-strategy-enables-efficient-scalable.html"
+      },
+      {
+        "n": 14,
+        "cat": "Sports",
+        "headline": "Bangladesh announces squad for first Test against West Indies",
+        "source": "The Business Standard",
+        "published": "Oct 23, 2026, 02:50 PM (+06:00 Bangladesh time)",
+        "angle": "Star pacer Taskin Ahmed returns to the 15-man squad for the first Test starting Oct 28 at Mirpur, as Bangladesh (4th in the WTC standings) push for a 2027 final berth — fresh this morning.",
+        "url": "https://www.tbsnews.net/sports/bangladesh-announces-squad-first-test-against-west-indies-1580891"
+      },
+      {
+        "n": 15,
+        "cat": "Entertainment",
+        "headline": "New Bollywood movies releasing this Friday, October 23: Udta Teer, Tum Mere Ho, Tu Hai Meri Kiran & more",
+        "source": "Filmibeat",
+        "published": "Oct 23, 2026, 10:35 AM IST",
+        "angle": "Today's Bollywood lineup includes the Ayushmann Khurrana–Sara Ali Khan spy comedy 'Udta Teer' plus romantic dramas 'Tum Mere Ho' and 'Tu Hai Meri Kiran' — a weekend watchlist for the South Asian community.",
+        "url": "https://www.filmibeat.com/top-listing/new-bollywood-movies-releasing-this-friday-oct-23-udta-teer-tum-mere-ho-tu-hai-meri-kiran-and-many-more-2-9254.html"
+      }
+    ]
+  },
+  {
+    "dateLabel": "Thursday, October 22, 2026",
+    "dateShort": "Thu, Oct 22, 2026",
+    "items": [
+      {
+        "n": 1,
+        "cat": "Bangladesh",
+        "headline": "3,000 tourists rescued after UPDF fires at tourists, law enforcers in Sajek: ISPR",
+        "source": "The Business Standard",
+        "published": "Oct 22, 2026, 4:50 pm (last modified 5:03 pm)",
+        "angle": "UPDF members fired 30–40 rounds at tourists and law enforcers at a road blockade in Rangamati's Sajek; Army and police evacuated about 3,000 stranded tourists, no casualties reported — a major security scare in a top tourist destination.",
+        "url": "https://www.tbsnews.net/bangladesh/3000-tourists-rescued-after-updf-fires-tourists-law-enforcers-sajek-ispr-1580311"
+      },
+      {
+        "n": 2,
+        "cat": "Bangladesh",
+        "headline": "Measles: Death toll reaches 1,207 as 2 more children die",
+        "source": "The Business Standard",
+        "published": "Oct 22, 2026, 3:25 pm (last modified 3:26 pm)",
+        "angle": "The measles crisis keeps worsening — 1,207 deaths and 217,760 suspected cases nationwide; families with kids need to know vaccination is urgent.",
+        "url": "https://www.tbsnews.net/bangladesh/health/measles-death-toll-reaches-1207-2-more-children-die-1580236"
+      },
+      {
+        "n": 3,
+        "cat": "Bangladesh",
+        "headline": "Bangladesh seeks $3.77b on top of WB loans for LNG import, food security in FY27",
+        "source": "The Business Standard",
+        "published": "Oct 22, 2026, 10:00 am (last modified 10:11 am)",
+        "angle": "Dhaka seeks $2.77b in project financing plus $1b budget support for LNG imports, banking reform and food security, alongside a $10b three-year framework — LNG costs feed straight into electricity prices back home.",
+        "url": "https://www.tbsnews.net/bangladesh/bangladesh-seeks-377b-top-wb-loans-lng-import-food-security-fy27-1579921"
+      },
+      {
+        "n": 4,
+        "cat": "International",
+        "headline": "Massive strikes hit Kyiv hours after Putin agrees to fresh peace talks",
+        "source": "CNN",
+        "published": "Oct 21, 2026 (updated morning of Oct 22)",
+        "angle": "Update to Oct 21 Russia-talks story — Russia hit Kyiv with 21 missiles and 210 drones overnight (2 killed, 34 injured) hours after Putin agreed in principle to US-mediated trilateral talks; a shock to energy and food prices that reaches US households.",
+        "url": "https://www.cnn.com/2026/10/21/europe/us-envoy-witkoff-putin-talks-russia-ukraine-intl"
+      },
+      {
+        "n": 5,
+        "cat": "International",
+        "headline": "U.S. and Israel are planning for a possible post-midterms attack on Iran",
+        "source": "NPR Up First (via WUOT)",
+        "published": "Oct 22, 2026, 4:57 AM EDT",
+        "angle": "Priority-1 world news — a possible US-Israel strike on Iran after the midterms would spike oil prices (Brent around $109) and put millions of Bangladeshi migrant workers in the Gulf at risk.",
+        "url": "https://www.wuot.org/2026-10-22/morning-news-brief"
+      },
+      {
+        "n": 6,
+        "cat": "US Visa / Immigration",
+        "headline": "USCIS May Stop Deferring to Prior Approvals: What the Proposed Rule Means for H-1B and L-1 Extensions",
+        "source": "Klug Law Firm",
+        "published": "Oct 19, 2026, 5:18 PM UTC (rule proposed in Federal Register Oct 14, 2026; comments due Nov 13, 2026)",
+        "angle": "DHS proposed ending automatic deference to prior USCIS approvals — every H-1B, L-1, O-1 and TN extension could face fresh review, about 6,000+ more RFEs a year; DFW's H-1B holders should plan longer, tougher renewals.",
+        "url": "https://www.klugfirm.com/h-1b/uscis-deference-prior-approvals-proposed-rule/"
+      },
+      {
+        "n": 7,
+        "cat": "US Visa / Immigration",
+        "headline": "DHS Proposes New Rule Eliminating H-1B Grace Period",
+        "source": "Hall Render (WisLawNOW)",
+        "published": "Oct 20, 2026, 3:17 PM UTC (comment period closes Nov 10, 2026)",
+        "angle": "A separate DHS proposal would end the 60-day grace period — H-1B, L-1, O-1 and TN workers who lose their jobs could fall out of status immediately; a huge stakes change.",
+        "url": "https://www.wislawnow.com/2026/10/dhs-proposes-new-rule-eliminating-h-1b-grace-period/"
+      },
+      {
+        "n": 8,
+        "cat": "Dallas / Texas",
+        "headline": "FEMA Denies Texas Household Aid After July Floods",
+        "source": "The American Quorum (citing Texas Tribune)",
+        "published": "Oct 21, 2026 (time not listed)",
+        "angle": "FEMA refused Individual Assistance for households hit by the July 12–Aug 4 floods in Hill Country and southwest Texas; Abbott's office says the state is reviewing the determination and has 30 days to appeal.",
+        "url": "https://www.theamericanquorum.com/state-news-texas-2026-10-21-a/"
+      },
+      {
+        "n": 9,
+        "cat": "Dallas / Texas",
+        "headline": "Blue Cross Blue Shield of Texas is dropping its Medicare Advantage plans",
+        "source": "KTTZ (KERA reporting)",
+        "published": "Oct 21, 2026, 7:15 AM CDT",
+        "angle": "People on BCBS Texas Medicare Advantage plans must move to a different plan starting in 2027 — Texas seniors should watch their mail.",
+        "url": "https://radio.kttz.org/show/daily-newscast/2026-10-21/october-21st-2026"
+      },
+      {
+        "n": 10,
+        "cat": "Schools / Colleges",
+        "headline": "Project Safe Schools investigation uncovers reporting failures at Dallas ISD, leading to $1 million settlement",
+        "source": "U.S. Department of Justice (press release)",
+        "published": "Oct 20, 2026",
+        "angle": "$145k penalty plus $855k in compliance reforms after Dallas ISD falsely certified compliance with state mandatory-reporting laws while taking federal special-education funds — a student-safety story for Dallas parents.",
+        "url": "https://www.justice.gov/usao-ndtx/pr/project-safe-schools-investigation-uncovers-reporting-failures-dallas-isd-leading-1"
+      },
+      {
+        "n": 11,
+        "cat": "Community",
+        "headline": "A Virtual Press Conference: The Case for a “Mosque Moratorium”",
+        "source": "BanSharia (press release)",
+        "published": "Oct 19, 2026",
+        "angle": "Muslim community — 33 conservative leaders urged Gov. Abbott to investigate mosques and pause new mosque approvals in Texas, following the state's Muslim Brotherhood/CAIR 'terrorist' designations; directly affects DFW's Muslim community.",
+        "url": "https://www.bansharia.com/release-press-release-a-virtual-press-conference-the-case-for-a-mosque-moratorium/"
+      },
+      {
+        "n": 12,
+        "cat": "Community",
+        "headline": "Festivities give way to farewell as Durga Puja ends",
+        "source": "Times of Bangladesh (tob.news)",
+        "published": "Oct 21, 2026, 4:00 am (updated 1:05 pm)",
+        "angle": "Hindu community — Bijoya Dashami on Oct 21 closed the six-day Durga Puja at 33,851 mandaps with idol immersions in Dhaka and Chattogram; also counts as a Bangladesh happening item.",
+        "url": "https://tob.news/festivities-give-way-to-farewell-as-durga-puja-ends/"
+      },
+      {
+        "n": 13,
+        "cat": "Science / Tech",
+        "headline": "Musk's political baggage clouds prospects for SpaceX-Tesla deal",
+        "source": "Reuters",
+        "published": "Oct 22, 2026 (time not listed)",
+        "angle": "Musk confirmed special committees at SpaceX and Tesla are reviewing a merger that would create a roughly $3.5T company — a tech earthquake with jobs and market implications; Democrats are already signaling scrutiny ahead of the Nov 3 midterms.",
+        "url": "https://www.reuters.com/legal/transactional/musks-political-baggage-clouds-prospects-spacex-tesla-deal-2026-10-22/"
+      },
+      {
+        "n": 14,
+        "cat": "Sports",
+        "headline": "Afghanistan beat Bangladesh to set up ODI tri-series final against Zimbabwe",
+        "source": "Geo Super TV",
+        "published": "Oct 22, 2026 (time not listed)",
+        "angle": "Update to Oct 21 story — Bangladesh were bowled out for 160 and lost by 7 wickets (87 balls to spare) in Sharjah on Oct 21, eliminated from the final; Rashid Khan 4/31, Parvez Hossain Emon 70 the lone fight.",
+        "url": "https://www.geosuper.tv/latest/60630-afghanistan-beat-bangladesh-to-set-up-odi-tri-series-final-against-zimbabwe"
+      },
+      {
+        "n": 15,
+        "cat": "Entertainment",
+        "headline": "Ranbir Kapoor apologises for 'goodness will end' faux pas at Ramayana event",
+        "source": "Cinema Express",
+        "published": "Oct 22, 2026, 5:58 am (updated)",
+        "angle": "At the Chennai musical event for the $100m+ epic Ramayana (A.R. Rahman, releasing worldwide Nov 5), Ranbir apologized for saying at a Kolkata Dussehra event that 'truth and goodness will end' instead of 'triumph' — the slip went viral and was heavily trolled.",
+        "url": "https://www.cinemaexpress.com/hindi/news/2026/Oct/22/ranbir-kapoor-apologises-for-goodness-will-end-faux-pas-at-ramayana-event"
+      }
+    ]
+  },
+  {
+    "dateLabel": "Wednesday, October 21, 2026",
+    "dateShort": "Wed, Oct 21, 2026",
+    "items": [
+      {
+        "n": 1,
+        "cat": "Bangladesh",
+        "headline": "Bangladesh yet to receive Saudi response on execution of two nationals",
+        "source": "Reuters",
+        "published": "Oct 21, 2026, 4:20 AM UTC",
+        "angle": "Dhaka still waiting for verdict copies — direct follow-up for migrant-worker families",
+        "url": "https://www.reuters.com/world/asia-pacific/bangladesh-yet-receive-saudi-response-execution-two-nationals-2026-10-21/"
+      },
+      {
+        "n": 2,
+        "cat": "Bangladesh",
+        "headline": "President calls for national committee to ensure equal rights for all",
+        "source": "The Business Standard",
+        "published": "Oct 21, 2026 (time not listed)",
+        "angle": "Hindu community angle — said at Bangabhaban during Durga Puja / Bijoya Dashami greetings",
+        "url": "https://www.tbsnews.net/bangladesh/president-calls-national-committee-ensure-equal-rights-all-1579801"
+      },
+      {
+        "n": 3,
+        "cat": "Bangladesh",
+        "headline": "Abducted Chattogram businessman rescued; ex-army man among 6 held",
+        "source": "The Business Standard",
+        "published": "Oct 21, 2026, 5:15 PM (updated 8:05 PM)",
+        "angle": "Rescued in Teknaf after Tk20 lakh ransom demand — crime story with a viral video hook",
+        "url": "https://www.tbsnews.net/bangladesh/abducted-ctg-businessman-rescued-ex-army-man-among-6-held-1579416"
+      },
+      {
+        "n": 4,
+        "cat": "International",
+        "headline": "France to deploy troops ahead of Saturday protests",
+        "source": "TOB News",
+        "published": "Oct 21, 2026, 11:23 AM (updated 6:10 PM)",
+        "angle": "France — massive security operation planned after Oct 17 riots in Paris, Marseille, Lyon",
+        "url": "https://tob.news/france-to-deploy-troops-ahead-of-saturday-protests/"
+      },
+      {
+        "n": 5,
+        "cat": "International",
+        "headline": "Russia is willing in principle to join new Ukraine peace talks in November, Kremlin says",
+        "source": "The Business Standard (Reuters)",
+        "published": "Oct 21, 2026, 8:05 PM",
+        "angle": "Russia — Putin told US envoy Witkoff Moscow is open to trilateral talks with Ukraine and the US",
+        "url": "https://www.tbsnews.net/world/russia-willing-principle-join-new-ukraine-peace-talks-november-kremlin-says-1579721"
+      },
+      {
+        "n": 6,
+        "cat": "International",
+        "headline": "Malaysia to recruit 10,000 Bangladeshi workers free of cost",
+        "source": "TOB News",
+        "published": "Oct 15, 2026, 5:36 PM",
+        "angle": "Malaysia agreed to hire 10,000 Bangladeshi workers at zero cost and list 338 Bangladeshi recruiting agencies — direct impact on Bangladeshi families and future remittance",
+        "url": "https://tob.news/malaysia-to-recruit-10000-bangladeshi-workers-free-of-cost/"
+      },
+      {
+        "n": 7,
+        "cat": "US Visa / Immigration",
+        "headline": "USCIS filing deadline change: online rules for 2026",
+        "source": "VisaVerge (USCIS Policy Alert PA-2026-15)",
+        "published": "Alert issued Sep 23, 2026 | Effective Oct 23, 2026",
+        "angle": "Weekend/holiday extension changes for online filings — age cutoffs like a 21st birthday do NOT move",
+        "url": "https://www.visaverge.com/documentation/uscis-ends-next-business-day-extension-for-online-filings-under-policy-alert-pa-2026-15/"
+      },
+      {
+        "n": 8,
+        "cat": "US Visa / Immigration",
+        "headline": "October 2026 Visa Bulletin: FY2027 brings employment-based visa movement",
+        "source": "Ogletree Deakins",
+        "published": "Sep 30, 2026",
+        "angle": "USCIS accepting Dates for Filing chart in October — wider I-485 filing window this month",
+        "url": "https://ogletree.com/insights-resources/blog-posts/october-2026-visa-bulletin-fy-2027-brings-employment-based-visa-movement/"
+      },
+      {
+        "n": 9,
+        "cat": "Dallas / Texas",
+        "headline": "Dallas targets 32,000 downtown residents in decade-long redevelopment vision",
+        "source": "Dallas Focal / Focal News",
+        "published": "Oct 13, 2026",
+        "angle": "Vision 2036 to double downtown population as AT&T, Neiman Marcus and the Mavs/Stars plan exits",
+        "url": "https://focalnews.org/dallas-tx/local/dallas-targets-32000-downtown-residents-in-decade-long-redevelopment-vision"
+      },
+      {
+        "n": 10,
+        "cat": "Dallas / Texas",
+        "headline": "Arlington approves changes to proposed Dallas Cowboys lease extension",
+        "source": "KWBU (NPR)",
+        "published": "Oct 21, 2026, 6:38 AM CDT",
+        "angle": "7-2 council vote on AT&T Stadium deal — still needs closing conditions and Texas AG sign-off",
+        "url": "https://www.kwbu.org/news-from-across-texas/2026-10-21/arlington-approves-changes-to-proposed-dallas-cowboys-lease-extension"
+      },
+      {
+        "n": 11,
+        "cat": "Schools / Colleges",
+        "headline": "North Texas Food Bank, Dallas College, and UNIQLO partner to support families",
+        "source": "GlobeNewswire (press release)",
+        "published": "Oct 21, 2026",
+        "angle": "Service news — free drive-through food distribution Oct 28, 10 AM–12 PM, Dallas College North Lake, Irving; ~500 families",
+        "url": "https://www.globenewswire.com/news-release/2026/10/21/3385509/0/en/north-texas-food-bank-dallas-college-and-uniqlo-partner-to-support-families-through-fall-food-distribution.html"
+      },
+      {
+        "n": 12,
+        "cat": "Community",
+        "headline": "As Texas Gov. Abbott targets Muslim groups, his PAC receives millions from Muslim oil exec",
+        "source": "Religion News Service",
+        "published": "Oct 20, 2026",
+        "angle": "Muslim community — Pakistani American Muslim donor Javaid Anwar gave $15M+ to Abbott while Abbott investigates Islamic groups",
+        "url": "https://religionnews.com/2026/10/20/meet-gov-abbotts-biggest-donor-muslim-oil-exec-javaid-anwar/"
+      },
+      {
+        "n": 13,
+        "cat": "Science / Tech",
+        "headline": "Quantinuum's quantum error-correction breakthrough brings fault-tolerant computing closer",
+        "source": "Intelligent CIO North America",
+        "published": "Oct 21, 2026",
+        "angle": "Helios computer hit 99.9995% logical fidelity — 5 errors per million operations, 10x better since September",
+        "url": "https://www.intelligentcio.com/north-america/2026/10/21/talking-point-quantinuums-quantum-error-correction-breakthrough-brings-fault-tolerant-computing-closer/"
+      },
+      {
+        "n": 14,
+        "cat": "Sports",
+        "headline": "Bangladesh fold for 160 against Afghanistan in must-win match",
+        "source": "TOB News",
+        "published": "Oct 21, 2026, 9:13 PM",
+        "angle": "Cricket — Emon 70, Rashid Khan 4/31; Bangladesh must restrict Afghanistan to 119 or fewer to reach the final",
+        "url": "https://tob.news/bangladesh-fold-for-160-against-afghanistan-in-must-win-match/"
+      },
+      {
+        "n": 15,
+        "cat": "Entertainment",
+        "headline": "Ramayana advance booking: Ranbir-starrer film crosses ₹4 crore before release",
+        "source": "Dainik Jagran / The Daily Jagran",
+        "published": "Oct 21, 2026",
+        "angle": "Advance gross Rs4.78 crore as of Oct 21 — Rahman + Hans Zimmer music, releases Nov 5",
+        "url": "https://www.thedailyjagran.com/entertainment/news/ramayana-advance-booking-ranbirstarrer-film-crosses-4-crore-before-release-heres-the-latest-update-10333431"
+      }
+    ]
+  }
 ];
 const CATS = ["Bangladesh","International","US Visa / Immigration","Dallas / Texas","Schools / Colleges","Community","Hindu Community","Science / Tech","Sports","Entertainment"];
 let current = 0;
