@@ -36,6 +36,12 @@
   .item a:hover{color:var(--accent);text-decoration:underline}
   .item .src{font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);margin:5px 0 3px 34px}
   .item .angle{font-size:14.5px;margin:0 0 0 34px;color:#374151;font-style:italic}
+  .item .meta{font-family:Arial,sans-serif;font-size:12.5px;color:#374151;margin:8px 0 0 34px;line-height:1.7}
+  .item .meta code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:12px}
+  .item .meta b{color:var(--ink)}
+  .item .photo{margin:10px 0 0 34px}
+  .item .photo img{max-width:100%;border-radius:6px}
+  .item .photo figcaption{font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);margin-top:4px}
   footer{max-width:1200px;margin:0 auto;padding:0 26px 26px;color:var(--muted);font-family:Arial,sans-serif;font-size:12.5px}
   select#dateselect{display:none}
   @media (max-width:760px){
@@ -73,135 +79,180 @@ const DAYS = [
         "angle": "The day's most attention-grabbing story — a significant new turn: police warn of possible large-scale sabotage in December, with intelligence pointing to a mass gathering in Dhaka and transport disruption around Gopalganj; extra forces, checkpoints and border vigilance are planned, and investigators are tracing funding and phone data from arrested suspects.",
         "cat": "Bangladesh",
         "headline": "Police step up security amid fears of December sabotage following recent attacks",
+        "keywords": "Bangladesh police, বাংলাদেশ পুলিশ, December sabotage, ডিসেম্বর নাশকতা, security, নিরাপত্তা",
         "n": 1,
         "published": "22 November, 2026, 07:30 am (Bangladesh time)",
+        "slug": "police-step-up-security-december-sabotage-fears",
         "source": "The Business Standard",
+        "tags": "Bangladesh, বাংলাদেশ, Police, পুলিশ, Sabotage, নাশকতা",
         "url": "https://www.tbsnews.net/bangladesh/law-order/police-step-security-amid-fears-december-sabotage-following-recent-attacks"
       },
       {
         "angle": "Fresh today — a new turn on the wage unrest: workers in Gazipur tried to block the Dhaka-Mymensingh highway again, police fired tear gas and sound grenades, and traffic was disrupted for about 45 minutes; the wage board meets again tomorrow, 23 November.",
         "cat": "Bangladesh",
         "headline": "Garment workers stage fresh protest in Gazipur, attempt to block Dhaka-Mymensingh highway",
+        "keywords": "Garment workers, পোশাক শ্রমিক, Gazipur, গাজীপুর, protest, বিক্ষোভ",
         "n": 2,
         "published": "22 November, 2026, 03:10 pm (Bangladesh time)",
+        "slug": "garment-workers-protest-gazipur-highway-blockade",
         "source": "The Business Standard",
+        "tags": "Garment workers, পোশাক শ্রমিক, Gazipur, গাজীপুর, Highway blockade, সড়ক অবরোধ",
         "url": "https://www.tbsnews.net/bangladesh/garment-workers-stage-fresh-protest-gazipur-attempt-block-dhaka-mymensingh-highway"
       },
       {
         "angle": "Balance pairing for item 1 — the Awami League's own side: the party announced nationwide programmes for 20-30 November, including protest processions today, demonstrations for garment workers' wages tomorrow, and a 48-hour nationwide lockdown on 29-30 November; it says Sheikh Hasina will return in December.",
         "cat": "Bangladesh",
         "headline": "Awami League announces nationwide programmes from November 20 to 30",
+        "keywords": "Awami League, আওয়ামী লীগ, nationwide programme, কর্মসূচি, lockdown, লকডাউন",
         "n": 3,
         "published": "20 November, 2026, time not listed (party statement dated 19 November, 2026)",
+        "slug": "awami-league-nationwide-programmes-november-20-30",
         "source": "The Voice",
+        "tags": "Awami League, আওয়ামী লীগ, Programme, কর্মসূচি, Bangladesh, বাংলাদেশ",
         "url": "https://thevoice.news/328194/awami-league-announces-nationwide-programm/"
       },
       {
         "angle": "Fresh today: the PM opened the 13th National SME Products Fair and set out the draft National SME Policy-2026 — 25,000 new SME entrepreneurs in four years and 2.5 million new SME jobs by 2031, with the sector's GDP share targeted at 35%.",
         "cat": "Economy",
         "headline": "Govt plans 25,000 new SME entrepreneurs, 25 lakh jobs by 2031: PM",
+        "keywords": "SME entrepreneurs, এসএমই উদ্যোক্তা, jobs, কর্মসংস্থান, PM, প্রধানমন্ত্রী",
         "n": 4,
         "published": "22 November, 2026, 05:16 pm (Bangladesh time)",
+        "slug": "government-25000-sme-entrepreneurs-25-lakh-jobs-2031",
         "source": "Dainik Shiksha (BSS)",
+        "tags": "SME, এসএমই, Entrepreneurs, উদ্যোক্তা, Jobs, কর্মসংস্থান",
         "url": "https://www.dainikshiksha.com/en/news/govt-plans-25000-new-sme-entrepreneurs-25-lakh-jobs-by-2031-pm-391155"
       },
       {
         "angle": "Priority 3 — the day's biggest global story, and a significant new turn on the 20 November Poland incident: NATO will hold an extraordinary North Atlantic Council meeting on Monday, 23 November; Secretary General Rutte visited Warsaw on Saturday and reaffirmed the alliance's commitment to Poland.",
         "cat": "International",
         "headline": "NATO Calls Emergency Brussels Meeting After Russian Missile Incursion into Poland",
+        "keywords": "NATO, ন্যাটো, Russia, রাশিয়া, Poland, পোল্যান্ড",
         "n": 5,
         "published": "22 November, 2026, 11:56 am CET",
+        "slug": "nato-emergency-meeting-russian-missile-poland",
         "source": "EU Today",
+        "tags": "NATO, ন্যাটো, Russia, রাশিয়া, Poland, পোল্যান্ড",
         "url": "https://eutoday.net/nato-emergency-meeting-brussels/"
       },
       {
         "angle": "Priority 1 — directly hits US households through fuel prices: two tankers were struck by projectiles in the Strait of Hormuz early Saturday and a third hit a mine and caught fire, as Iran unveiled a new dual-missile launcher; no casualties were reported.",
         "cat": "International",
         "headline": "Iran strikes three oil tankers as it unveils new missile launcher",
+        "keywords": "Iran, ইরান, oil tanker, তেল ট্যাংকার, missile, ক্ষেপণাস্ত্র",
         "n": 6,
         "published": "21 November, 2026, 11:55 pm (Bangladesh time)",
+        "slug": "iran-strikes-three-oil-tankers-missile-launcher",
         "source": "The Business Standard",
+        "tags": "Iran, ইরান, Oil tanker, তেল ট্যাংকার, Missile, ক্ষেপণাস্ত্র",
         "url": "https://www.tbsnews.net/worldbiz/middle-east/iran-strikes-three-oil-tankers-it-unveils-new-missile-launcher-1609996"
       },
       {
         "angle": "A Boston federal judge signalled he may block the freeze on green-card applications from about 113,000 refugees and the rule cutting the time to contest a status loss from 30 days to 10; no ruling yet. Corroborated by Reuters and Bloomberg Law coverage of the same 20 November hearing.",
         "cat": "US Visa / Immigration",
         "headline": "Boston Judge Weighs Blocking Trump Freeze on Refugee Green Cards and Deportations",
+        "keywords": "Refugee green card, শরণার্থী গ্রিন কার্ড, Boston judge, বোস্টন, immigration, অভিবাসন",
         "n": 7,
         "published": "21 November, 2026, 2:05 pm UTC",
+        "slug": "boston-judge-refugee-green-card-freeze",
         "source": "US News Pulse",
+        "tags": "Refugees, শরণার্থী, Green card, গ্রিন কার্ড, US immigration, যুক্তরাষ্ট্র অভিবাসন",
         "url": "https://usnewspulse.com/us-news/boston-judge-weighs-blocking-trump-freeze-on-refugee-green-cards-and-deportations"
       },
       {
         "angle": "Also fills today's Schools / Colleges slot: international student enrolment at US colleges fell 9% this fall, per a new Institute of International Education survey of 800+ institutions — a sharp turn for the pipeline Bangladeshi students rely on.",
         "cat": "US Visa / Immigration",
         "headline": "New Report Finds Drop in International Students at U.S. Colleges",
+        "keywords": "International students, আন্তর্জাতিক শিক্ষার্থী, US colleges, যুক্তরাষ্ট্র, enrollment, ভর্তি",
         "n": 8,
         "published": "20 November, 2026, time not listed",
+        "slug": "international-students-drop-us-colleges",
         "source": "Boundless",
+        "tags": "International students, আন্তর্জাতিক শিক্ষার্থী, US colleges, মার্কিন কলেজ, Enrollment, ভর্তি",
         "url": "https://www.boundless.com/blog/boundless-weekly-immigration-news"
       },
       {
         "angle": "President Trump told Fox News that outgoing Texas Sen. John Cornyn is doing a 'tremendous disservice' by blocking his Dallas judicial nominee, T. Elliot Gaiser; Cornyn says the nominee is a non-Texan with no trial-court experience who was never vetted with him.",
         "cat": "Dallas / Texas",
         "headline": "Trump says Sen. John Cornyn is doing a 'tremendous disservice' by blocking Texas judicial pick",
+        "keywords": "Trump, ট্রাম্প, John Cornyn, জন কর্নিন, Texas, টেক্সাস",
         "n": 9,
         "published": "22 November, 2026, time not listed",
+        "slug": "trump-cornyn-texas-judicial-pick",
         "source": "New York Post",
+        "tags": "Donald Trump, ডোনাল্ড ট্রাম্প, John Cornyn, জন কর্নিন, Texas, টেক্সাস",
         "url": "https://nypost.com/2026/11/22/us-news/trump-says-sen-john-cornyn-is-doing-a-tremendous-disservice-by-blocking-texas-judicial-pick/"
       },
       {
         "angle": "Two Dallas officers sued the city and five department officials, alleging four of the five women in an elite fugitive unit were barred from high-risk arrests because of their sex; an internal review found supervisors had not documented reasons for the restrictions.",
         "cat": "Dallas / Texas",
         "headline": "Four women in elite Dallas police unit sidelined from key tactical duties, federal suit alleges",
+        "keywords": "Dallas police, ডালাস পুলিশ, women officers, নারী পুলিশ, lawsuit, মামলা",
         "n": 10,
         "published": "22 November, 2026, 12:02 pm UTC",
+        "slug": "dallas-police-women-sidelined-federal-suit",
         "source": "The Dallas Morning News (via My I Messenger)",
+        "tags": "Dallas police, ডালাস পুলিশ, Women officers, নারী কর্মকর্তা, Lawsuit, মামলা",
         "url": "https://www.myimessenger.com/news/four-women-in-elite-dallas-police-unit-sidelined-from-key-tactical-duties-federal-suit-alleges/"
       },
       {
         "angle": "Feature: a Texas Muslim-community story — The Intercept reports Abbott's and Paxton's campaign against CAIR ran into voters instead: Hinojosa pledged to reverse the terrorist designation, Paxton dropped his lawsuit, and early voting by Texas Muslims rose 78.6% since 2018.",
         "cat": "Community",
         "headline": "Greg Abbott Tried to Destroy Muslim Group By Calling Them Terrorists. Texas Voters Balked.",
+        "keywords": "Greg Abbott, গ্রেগ অ্যাবট, Muslim group, মুসলিম, Texas voters, টেক্সাস ভোটার",
         "n": 11,
         "published": "18 November, 2026, time not listed",
+        "slug": "abbott-muslim-group-terrorist-label-texas-voters",
         "source": "The Intercept (via Muslim Legal Fund of America)",
+        "tags": "Greg Abbott, গ্রেগ অ্যাবট, Muslim community, মুসলিম সম্প্রদায়, Texas, টেক্সাস",
         "url": "https://mlfa.org/greg-abbott-tried-to-destroy-muslim-group-by-calling-them-terrorists-texas-voters-balked/"
       },
       {
         "angle": "Update to the Nov 19 indictment item: the 19-year-old accused of plotting a mass shooting at the Aurora Hindu temple on the first day of Navratri pleaded not guilty to all charges on Thursday; he remains in detention, with the next hearing set for 7 January.",
         "cat": "Hindu Community",
         "headline": "Illinois man pleads not guilty over thwarted mass shooting at Hindu temple",
+        "keywords": "Hindu temple, হিন্দু মন্দির, Illinois, ইলিনয়, mass shooting plot, হামলার ষড়যন্ত্র",
         "n": 12,
         "published": "19 November, 2026, 6:42 pm",
+        "slug": "illinois-man-pleads-not-guilty-hindu-temple-plot",
         "source": "Associated Press (via Capitol City Now)",
+        "tags": "Hindu temple, হিন্দু মন্দির, Illinois, ইলিনয়, Court, আদালত",
         "url": "https://capitolcitynow.com/news/248842-illinois-man-pleads-not-guilty-over-thwarted-mass-shooting-at-hindu-temple/"
       },
       {
         "angle": "SpaceX's Dragon cargo craft splashed down off Los Angeles on Saturday, completing NASA's 35th ISS resupply mission — bringing home a 3D-bioprinted blood-vessel construct, frozen tumour organoids for cancer research and samples of antibiotic-resistant bacteria.",
         "cat": "Science / Tech",
         "headline": "Dragon Returns to Earth Packed With Science and Cargo",
+        "keywords": "SpaceX Dragon, স্পেসএক্স ড্রাগন, NASA, নাসা, space, মহাকাশ",
         "n": 13,
         "published": "21 November, 2026, 5:10 pm, timezone not listed",
+        "slug": "spacex-dragon-returns-earth-science-cargo",
         "source": "NASA",
+        "tags": "SpaceX, স্পেসএক্স, Dragon, ড্রাগন, NASA, নাসা",
         "url": "https://www.nasa.gov/blogs/spacestation/2026/11/21/dragon-returns-to-earth-packed-with-science-and-cargo/"
       },
       {
         "angle": "Bangladesh cricket first: veteran batter Mushfiqur Rahim is ruled out of the second Test against South Africa in Centurion with a groin injury, and fast bowler Hasan Mahmud is also out — the series decider starts Monday, 23 November.",
         "cat": "Sports",
         "headline": "Bangladesh's Mushfiqur ruled out of second South Africa test with groin injury",
+        "keywords": "Mushfiqur Rahim, মুশফিকুর রহিম, Bangladesh cricket, বাংলাদেশ ক্রিকেট, South Africa, দক্ষিণ আফ্রিকা",
         "n": 14,
         "published": "21 November, 2026, 3:52 pm UTC",
+        "slug": "mushfiqur-ruled-out-second-south-africa-test",
         "source": "Reuters",
+        "tags": "Mushfiqur Rahim, মুশফিকুর রহিম, Bangladesh cricket, বাংলাদেশ ক্রিকেট, Test, টেস্ট",
         "url": "https://www.reuters.com/sports/cricket/bangladeshs-mushfiqur-ruled-out-second-south-africa-test-with-groin-injury-2026-11-21/"
       },
       {
         "angle": "Bangladesh entertainment first: rumours are swirling that Dhallywood superstar Shakib Khan could marry for a third time by the end of the year — reports say he has expressed interest in marrying a doctor, a choice his parents favour; nothing is confirmed.",
         "cat": "Entertainment",
         "headline": "Speculation Swirls Around Dhallywood Superstar Shakib Khan's Third Marriage",
+        "keywords": "Shakib Khan, শাকিব খান, Dhallywood, ঢালিউড, marriage, বিয়ে",
         "n": 15,
         "published": "date not listed",
+        "slug": "shakib-khan-third-marriage-speculation",
         "source": "Voice7News",
+        "tags": "Shakib Khan, শাকিব খান, Dhallywood, ঢালিউড, Entertainment, বিনোদন",
         "url": "https://www.voice7news.tv/entertainment/news/4153"
       }
     ]
@@ -1519,7 +1570,10 @@ function show(i){
     html += `<section class="cat"><h3>${c}</h3>` + its.map(x=>
       `<div class="item"><span class="num">${x.n}</span><a href="${x.url}" target="_blank" rel="noopener">${x.headline}</a>` +
       `<div class="src">Source: ${x.source} &nbsp;|&nbsp; Published: ${x.published}</div>` +
-      `<p class="angle">${x.angle}</p></div>`
+      `<p class="angle">${x.angle}</p>` +
+      (x.photo ? `<figure class="photo"><img src="${x.photo}" alt=""><figcaption>${x.caption || ''}</figcaption></figure>` : '') +
+      ((x.slug || x.keywords || x.tags) ? `<div class="meta">${x.slug ? `<div><b>Slug:</b> <code>${x.slug}</code></div>` : ''}${x.keywords ? `<div><b>Keywords:</b> ${x.keywords}</div>` : ''}${x.tags ? `<div><b>Tags:</b> ${x.tags}</div>` : ''}</div>` : '') +
+      `</div>`
     ).join('') + '</section>';
   }
   document.getElementById('items').innerHTML = html;
